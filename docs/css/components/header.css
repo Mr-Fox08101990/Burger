@@ -24,6 +24,10 @@
     text-transform: uppercase;
 }
 
+.nav__link:hover {
+    text-decoration: underline;
+}
+
 .nav__item::before {
     content: '';
     display: inline-block;
