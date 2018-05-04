@@ -234,9 +234,9 @@
 }
 
 .arrow-scroll-next-image {
-  
+  transform: rotate(90deg);
 }
 
 .arrow-scroll-prev-image {
-
+  transform: rotate(270deg);
 }

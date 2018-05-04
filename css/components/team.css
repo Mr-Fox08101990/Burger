@@ -27,8 +27,8 @@
     width: 370px;
 }
 
-.accordion-team-item__active .accordion-link-title {
-    color: #f8b43a;
+.accordion-team-item__active .accordion-team-dropdown {
+    display: block;
 }
 
 .accordion-team-item__active .accordion-link-title::before {
@@ -40,6 +40,10 @@
     border-bottom-color: #f8b43a;
     border-top-width: 0;
     margin-right: 5px;
+}
+
+.accordion-team-item__active .accordion-link-title{
+    color: #f8b43a;
 }
 
 .accordion-link-title {
@@ -58,13 +62,17 @@
     width: 0;
     height: 0;
     border: 5px solid transparent;
-    border-top-color: #fff;
+    border-top-color: #f8b43a;
     border-bottom-width: 0;
     margin-right: 5px;
 }
 
 .accordion-team-item__active .accordion-team-dropdown {
     height: initial;
+}
+
+.accordion-team-dropdown {
+    display: none;
 }
 
 .accordion-team-left {
