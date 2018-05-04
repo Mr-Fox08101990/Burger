@@ -14,7 +14,7 @@ html, body {
     clear: both;
 }
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 

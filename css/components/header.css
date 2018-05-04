@@ -1,5 +1,6 @@
 .header {
     padding-top: 10px;
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -19,13 +20,18 @@
 }
 
 .nav__link {
-    font-size: 13px;
+    font-family: 'Lifehack';
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
     color: #ffffff;
     text-transform: uppercase;
 }
 
 .nav__link:hover {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
+    border-bottom: 2px solid #fff;
 }
 
 .nav__item::before {

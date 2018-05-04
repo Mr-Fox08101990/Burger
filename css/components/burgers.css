@@ -1,0 +1,143 @@
+.item__image,
+.item__text,
+.item__text2 {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  margin: 0;
+}
+
+.burgers {
+  background-color: #f9b43b;
+  position: relative;
+  padding: 90px 45px;
+}
+
+.composition__link {
+  background-color: #f08c33;
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  display: block;
+  padding: 14px 23px;
+  transition: 0.2s;
+}
+
+.composition__link:hover {
+  background-color: #e35028;
+}
+
+.link-text {
+  display: block;
+  font-family: "Gagalin";
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.composition__list {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  font-size: 0;
+  width: 280px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  transition: left 0;
+  transition: opacity 1s;
+}
+
+.composition__list:hover {
+  left: 244px;
+  top: 90px;
+  opacity: 1;
+}
+
+.composition__link:hover+.composition__list {
+  left: 90px;
+  top: 0px;
+  opacity: 1;
+}
+
+.composition__item {
+  margin-bottom: 15px;
+}
+
+.composition__item:last-child {
+  margin-bottom: 0;
+}
+
+.item__text {
+  width: 70%;
+  font-family: "Ubuntu";
+  font-weight: 700;
+}
+
+.item__text2 {
+  width: 30%;
+  text-align: right;
+}
+
+.item__text_beef::before {
+  content: '';
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url("/img/icons/beef.svg") center center no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.item__text_buns::before {
+  content: '';
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url("/img/icons/buns.svg") center center no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.about-burgers {
+  height: 650px;
+}
+
+.about-burgers__left,
+.about-burgers__right {
+  float: left;
+  width: 50%;
+}
+
+.about-burgers__left {
+  height: 100%;
+  position: relative;
+}
+
+.burgers__ccal {
+  position: absolute;
+  bottom: 0;
+  font-family: "Gagalin";
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ccal-val {
+  background: url("/img/icons/kkal.svg") center center no-repeat;
+  background-size: contain;
+  height: 60px;
+  width: 60px;
+  color: #fff;
+  opacity: 0.5;
+  text-align: center;
+  padding-top: 30px;
+  margin: 0;
+}
+
+.ccal-text {
+  margin-top: 7px;
+  margin-bottom: 0;
+  text-align: center;
+  width: 60px;
+}
