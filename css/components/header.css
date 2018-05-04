@@ -62,7 +62,11 @@
     font-size: 13px;
     color: #ffffff;
     text-transform: uppercase;
-    background-color: #e45028;
+    background-color: #f6ab3a;
     text-align: center;
     padding-top: 12px;
+}
+
+.pay-btn__link:hover {
+    background-color: #e45028;
 }

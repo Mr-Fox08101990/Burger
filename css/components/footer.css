@@ -31,7 +31,7 @@
 }
 
 .phone-numder {
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu';
     font-weight: 700;
     font-style: normal;
     font-size: 14px;
@@ -43,7 +43,7 @@
 }
 
 .phone-numder::before {
-    content: "";
+    content: " ";
     width: 11px;
     height: 11px;
     background: url(/img/icons/phone.svg), 0 0, no-repeat;

@@ -101,6 +101,50 @@
   margin-right: 20px;
 }
 
+.item__text_salad::before {
+  content: '';
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url("/img/icons/salad.svg") center center no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.item__text_sauce::before {
+  content: '';
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url("/img/icons/sauce.svg") center center no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.item__text_cucumder::before {
+  content: '';
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url("/img/icons/cucumber.svg") center center no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.item__text_cheese::before {
+  content: '';
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url("/img/icons/cheese.svg") center center no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
 .about-burgers {
   height: 650px;
 }
@@ -140,4 +184,59 @@
   margin-bottom: 0;
   text-align: center;
   width: 60px;
+}
+
+.about-burgers__right {
+  height: 100%;
+  padding-top: 70px;
+  padding-left: 30px;
+}
+
+.burger-title {
+  font-size: 72px;
+  font-family: "Gagalin";
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.about-burgers__text {
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: left;
+  margin-bottom: 15px;
+  line-height: 1.42;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 50px;
+}
+
+.pay-price {
+  font-size: 72px;
+  font-family: "Gagalin";
+  color: #e35028;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.pay-price, .pay-btn {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.one-burger {
+  background: url(/img/Burgers/Dark.png) center center no-repeat;
+  background-size: contain;
+}
+
+.arrow-scroll-next-image {
+  
+}
+
+.arrow-scroll-prev-image {
+
 }
