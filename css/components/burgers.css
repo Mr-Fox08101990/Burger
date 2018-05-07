@@ -104,7 +104,7 @@
   display: inline-block;
   width: 45px;
   height: 45px;
-  background: url("/img/icons/beef.svg") center center no-repeat;
+  background: url("img/icons/beef.svg") center center no-repeat;
   background-size: contain;
   vertical-align: middle;
   margin-right: 20px;
@@ -115,7 +115,7 @@
   display: inline-block;
   width: 45px;
   height: 45px;
-  background: url("/img/icons/buns.svg") center center no-repeat;
+  background: url("img/icons/buns.svg") center center no-repeat;
   background-size: contain;
   vertical-align: middle;
   margin-right: 20px;
@@ -126,7 +126,7 @@
   display: inline-block;
   width: 45px;
   height: 45px;
-  background: url("/img/icons/salad.svg") center center no-repeat;
+  background: url("img/icons/salad.svg") center center no-repeat;
   background-size: contain;
   vertical-align: middle;
   margin-right: 20px;
@@ -137,7 +137,7 @@
   display: inline-block;
   width: 45px;
   height: 45px;
-  background: url("/img/icons/sauce.svg") center center no-repeat;
+  background: url("img/icons/sauce.svg") center center no-repeat;
   background-size: contain;
   vertical-align: middle;
   margin-right: 20px;
@@ -148,7 +148,7 @@
   display: inline-block;
   width: 45px;
   height: 45px;
-  background: url("/img/icons/cucumber.svg") center center no-repeat;
+  background: url("img/icons/cucumber.svg") center center no-repeat;
   background-size: contain;
   vertical-align: middle;
   margin-right: 20px;
@@ -159,7 +159,7 @@
   display: inline-block;
   width: 45px;
   height: 45px;
-  background: url("/img/icons/cheese.svg") center center no-repeat;
+  background: url("img/icons/cheese.svg") center center no-repeat;
   background-size: contain;
   vertical-align: middle;
   margin-right: 20px;
@@ -188,7 +188,7 @@
 }
 
 .ccal-val {
-  background: url("/img/icons/kkal.svg") center center no-repeat;
+  background: url("img/icons/kkal.svg") center center no-repeat;
   background-size: contain;
   height: 60px;
   width: 60px;
@@ -249,7 +249,7 @@
 }
 
 .one-burger {
-  background: url(/img/Burgers/Dark.png) center center no-repeat;
+  background: url(img/Burgers/Dark.png) center center no-repeat;
   background-size: contain;
 }
 
