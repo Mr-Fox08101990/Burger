@@ -3,7 +3,6 @@
     background-size: cover;
     padding-top: 100px;
     width: 100%;
-    min-height: 650px;
 }
 
 .form-title {
@@ -151,4 +150,8 @@
     background-color: #2f3234;
     text-align: center;
     padding-top: 12px;
+}
+
+.reset-btn__link:hover {
+    background-color: #1f2122;
 }

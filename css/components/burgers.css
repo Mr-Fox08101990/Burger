@@ -1,3 +1,23 @@
+.burgers__list {
+  float: left;
+  width: 80%;
+  height: 100%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.arrow-left-block {
+  float: left;
+  width: 5%;
+  height: 100%;
+}
+
+.arrow-right-block {
+  float: left;
+  width: 5%;
+  height: 100%;
+}
+
 .item__image,
 .item__text,
 .item__text2 {
@@ -233,10 +253,25 @@
   background-size: contain;
 }
 
+.arrow-burgers-left {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  
+}
+
+.arrow-burgers-right {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
 .arrow-scroll-next-image {
+  position: absolute;
   transform: rotate(90deg);
 }
 
 .arrow-scroll-prev-image {
+  position: absolute;
   transform: rotate(270deg);
 }
