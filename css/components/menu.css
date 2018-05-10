@@ -1,5 +1,5 @@
 .menu {
-    background: url(/img/menu/pic1.png) 0 0 no-repeat;
+    background: url(../../img/menu/pic1.png) 0 0 no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -52,7 +52,7 @@
 }
 
 .meat {
-    background: url(/img/menu/pic2.png) 0 0 no-repeat;
+    background: url(../../img/menu/pic2.png) 0 0 no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -60,7 +60,7 @@
 }
 
 .vegan {
-    background: url(/img/menu/pic3.png) 0 0 no-repeat;
+    background: url(../../img/menu/pic3.png) 0 0 no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -68,7 +68,7 @@
 }
 
 .diet {
-    background: url(/img/menu/pic4.png) 0 0 no-repeat;
+    background: url(../../img/menu/pic4.png) 0 0 no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;

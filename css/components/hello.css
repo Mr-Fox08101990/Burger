@@ -5,7 +5,7 @@
 
 
 .hello {
-    background: url(/img/video-bg.png) 0 0 no-repeat;
+    background: url(../../img/video-bg.png) 0 0 no-repeat;
     background-size: cover;
     width: 100%;
 }
