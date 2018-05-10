@@ -6,14 +6,39 @@
     min-height: 650px;
 }
 
+.menu__list {
+  overflow: hidden;
+  width: 3500px;
+}
+
+.menu__item {
+  display: flex;
+  width: 1100px;
+  position: relative;
+
+}
+
+.menu__bookmark {
+  height: 100%;
+  /* float: left; */
+  position: relative;
+  width: 80px;
+  height: 650px;
+}
+
 .menu__subtitle {
     font-size: 40px;
     font-family: "Gagalin";
     color: #fff;
     text-transform: uppercase;
     text-align: left;
-    transform: rotate(270deg);
     font-weight: 700;
+    transform: rotate(270deg);
+    transform-origin: 0 0;
+    left: 0;
+    top: 100%;
+    position: absolute;
+    width: 100%;
 }
 
 .menu__text {
@@ -23,6 +48,7 @@
     font-style: normal;
     color: #fff;
     text-align: left;
+    /* float: left; */
 }
 
 .meat {
