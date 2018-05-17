@@ -1,0 +1,44 @@
+.hello {
+  background: url(../img/video-bg.png) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.content {
+  margin: 0 auto;
+  margin-bottom: rem(150px);
+}
+
+.page-image {
+  float: left;
+  position: relative;
+  width: 50%;
+  padding-left: rem(10px);
+  &__pic {
+    position: absolute;
+    padding-left: rem(25px);
+  }
+  &__pic2 {
+    position: absolute;
+    padding-top: rem(60px);
+  }
+}
+
+.page-title {
+  float: right;
+  width: 50%;
+  padding-top: rem(130px);
+  .title {
+    @include title;
+  }
+  .subtitle {
+    font-size: rem(65px);
+    font-family: "Lifehack";
+    color: $white;
+    font-style: italic;
+  }
+}
+
+.arrow-scroll {
+  text-align: center;
+}

@@ -1,0 +1,214 @@
+.burgers {
+  background-color: $orange;
+  position: relative;
+  padding: rem(90px) rem(45px);
+  height: auto;
+}
+
+.burgers__list {
+  float: left;
+  width: 80%;
+  height: 100%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.arrow-block {
+  &-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+  &-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+}
+
+.arrow-scroll {
+  &-next-image {
+    position: absolute;
+    transform: rotate(90deg);
+  }
+  &-prev-image {
+    position: absolute;
+    transform: rotate(270deg);
+  }
+}
+
+.item__text,
+.item__text2 {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: rem(14px);
+  margin: 0;
+}
+
+.composition__link {
+  background-color: $orange2;
+  @include equal(rem(90px));
+  border-radius: rem(5px);
+  display: block;
+  padding: rem(14px) rem(20px);
+  transition: 0.2s;
+  &:hover {
+    background-color: $red;
+  }
+  &:hover+.composition__list {
+    left: rem(90px);
+    top: 0px;
+    opacity: 1;
+  }
+  & .link-text {
+    display: block;
+    font-family: "Gagalin";
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.composition__list {
+  position: absolute;
+  left: rem(-9999px);
+  opacity: 0;
+  font-size: 0;
+  width: rem(280px);
+  background-color: $grey;
+  border-radius: rem(5px);
+  padding: rem(20px);
+  transition: left 0s;
+  transition: opacity 1s;
+  &:hover {
+    left: rem(90px);
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.composition__item {
+  margin-bottom: rem(15px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  & .item__text {
+    width: 70%;
+    font-family: "Ubuntu";
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: rem(14px);
+    margin: 0;
+  }
+  & .item__text2 {
+    width: 30%;
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: rem(14px);
+    margin: 0;
+  }
+}
+
+@each $items-acc in beef,
+buns,
+salad,
+sauce,
+cucumber,
+cheese {
+  .item__text_#{$items-acc}::before {
+    content: '';
+    display: inline-block;
+    @include equal(rem(45px));
+    background: url("../img/icons/#{$items-acc}.svg") center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: rem(20px);
+  }
+}
+
+.about-burgers {
+  height: rem(650px);
+  &__left {
+    float: left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+  &__right {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding-top: rem(70px);
+    padding-left: rem(30px);
+  }
+}
+
+.burgers__ccal {
+  position: absolute;
+  bottom: 0;
+  font-family: "Gagalin";
+  color: $grey;
+  & .ccal-val {
+    background: url("../img/icons/kkal.svg") center center no-repeat;
+    background-size: contain;
+    @include equal(rem(60px));
+    color: $white;
+    opacity: 0.5;
+    text-align: center;
+    padding-top: rem(30px);
+    margin: 0;
+  }
+  & .ccal-text {
+    margin-top: rem(7px);
+    margin-bottom: 0;
+    text-align: center;
+    width: rem(60px);
+  }
+}
+
+.burger-title {
+  @include title;
+  color: $white;
+  margin-bottom: rem(30px);
+}
+
+.about-burgers__text {
+  font-family: 'Ubuntu';
+  font-size: rem(20px);
+  font-weight: 500;
+  font-style: normal;
+  text-align: left;
+  margin-bottom: rem(15px);
+  line-height: 1.42;
+  color: $black;
+  margin-bottom: rem(50px);
+}
+
+.pay-price {
+  font-size: rem(72px);
+  font-family: "Gagalin";
+  color: $red;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: rem(20px);
+  display: inline-block;
+  vertical-align: middle;
+  & + .pay-btn {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@each $images-acc in dark,
+cheeseburger,
+chiken,
+sandwich,
+sandwich {
+  .#{$images-acc}-burger {
+    background: url("../img/Burgers/#{$images-acc}.png") center center no-repeat;
+    background-size: contain;
+  }
+}

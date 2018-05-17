@@ -1,0 +1,65 @@
+.best {
+  background: url(../img/bg.png) center center no-repeat;
+  background-size: cover;
+  padding-top: rem(150px);
+}
+
+.best-page {
+  width: 100%;
+  min-height: rem(650px);
+}
+
+.best-title {
+  @include title;
+  color: $blue;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: rem(50px);
+}
+
+.about__list {
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.about__item {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  margin-right: rem(20px);
+  vertical-align: middle;
+  margin-bottom: rem(54px);
+  font-size: rem(14px);
+  float: left;
+  width: rem(300px);
+  height: 100%;
+  &:nth-child(3) {
+    margin-right: 0;
+  }
+  & h2 {
+    font-family: 'Lifehack';
+    font-size: rem(25px);
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: rem(15px);
+  }
+  & p {
+    font-family: 'Ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    line-height: 1.42;
+  }
+}
+
+.about__pic {
+  margin-bottom: rem(20px);
+  width: rem(100px);
+  height: rem(100px);
+  text-align: center;
+}

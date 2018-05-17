@@ -1,0 +1,48 @@
+.header {
+  padding-top: rem(10px);
+  margin-bottom: rem(20px);
+}
+
+.logo {
+  float: left;
+  width: 31%;
+  margin-right: rem(6px);
+}
+
+.nav {
+  float: left;
+  padding-top: rem(25px);
+  margin-right: rem(15px);
+}
+
+.nav__item {
+  display: inline-block;
+  &::before {
+    @include circle(rem(8px), $white);
+    content: '';
+    display: inline-block;
+    margin-right: rem(10px);
+    margin-left: rem(10px);
+    vertical-align: middle;
+  }
+  &:first-child::before {
+    display: none;
+  }
+}
+
+.nav__link {
+  font-family: 'Lifehack';
+  font-size: rem(12px);
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+  &:hover {
+    border-bottom: rem(2px) solid $white;
+  }
+}
+
+.pay-btn {
+  @include pay-btn;
+}

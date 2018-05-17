@@ -1,0 +1,102 @@
+.team {
+  background: url(/img/teampic1.png) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+}
+
+.team-block {
+  width: 50%;
+  height: 100%;
+  float: right;
+  background-color: rgba(47, 50, 52, 0.93);
+  padding: rem(100px) rem(100px);
+  & .team-title {
+    @include title;
+    text-align: left;
+    margin-bottom: rem(20px);
+  }
+}
+
+.accordion-team-item {
+  margin-bottom: rem(30px);
+  width: rem(370px);
+  &__active {
+    & .accordion-team-dropdown {
+      display: block;
+      height: initial;
+    }
+    & .accordion-link-title {
+      color: $orange;
+    }
+    & .accordion-link-title::before {
+      content: '';
+      display: inline-block;
+      @include equal (rem(0));
+      border: 5px solid transparent;
+      border-bottom-color: $orange;
+      border-top-width: 0;
+      margin-right: rem(5px);
+    }
+  }
+}
+
+.accordion-link-title {
+  font-family: "Gagalin";
+  font-size: rem(14px);
+  font-weight: 400;
+  font-style: normal;
+  color: $white;
+  text-align: left;
+  margin-bottom: rem(15px);
+  &::before {
+    content: '';
+    display: inline-block;
+    @include equal (rem(0));
+    border: rem(5px) solid transparent;
+    border-top-color: $orange;
+    border-bottom-width: 0;
+    margin-right: rem(5px);
+  }
+}
+
+.accordion-team-dropdown {
+  display: none;
+  & .accordion-team-left {
+    @include equal(rem(100px));
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin-right: rem(15px);
+    display: inline-block;
+    vertical-align: middle;
+    &+.accordion-team-pic {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include equal (100%);
+      object-fit: cover;
+    }
+  }
+  & .accordion-team-about {
+    display: inline-block;
+    vertical-align: middle;
+    & .accordion-team-subtitle {
+      font-family: "Ubuntu";
+      font-size: rem(14px);
+      font-weight: 700;
+      font-style: normal;
+      color: $white;
+      text-align: left;
+    }
+    & .accordion-team-text {
+      font-family: "Ubuntu";
+      font-size: rem(14px);
+      font-weight: 300;
+      font-style: normal;
+      color: $white;
+      text-align: left;
+    }
+  }
+}

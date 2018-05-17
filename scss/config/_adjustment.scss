@@ -1,0 +1,41 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.maincontent {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.section {
+  height: 100vh;
+  min-height: rem(650px);
+  min-width: rem(940px);
+  background-color: rgba(0, 0, 0, .31);
+}
+
+.container {
+  margin: 0 auto;
+  width: rem(940px);
+  padding-left: rem(73px);
+  position: relative;
+  height: 100%;
+}
+
+// %clearfix {
+//   &::after {
+//     content: '';
+//     display: block;
+//     clear: both;
+//   }
+// }
+
+.clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
