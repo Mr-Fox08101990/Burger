@@ -3,12 +3,15 @@
   background-size: cover;
   position: relative;
   width: 100%;
+  @include flex;
+  justify-content: flex-end;
 }
 
 .team-block {
   width: 50%;
   height: 100%;
-  float: right;
+  @include flex;
+  flex-direction: column;
   background-color: rgba(47, 50, 52, 0.93);
   padding: rem(100px) rem(100px);
   & .team-title {
@@ -23,7 +26,7 @@
   width: rem(370px);
   &__active {
     & .accordion-team-dropdown {
-      display: block;
+      @include flex;
       height: initial;
     }
     & .accordion-link-title {
@@ -68,7 +71,7 @@
     position: relative;
     overflow: hidden;
     margin-right: rem(15px);
-    display: inline-block;
+    @include flex;
     vertical-align: middle;
     &+.accordion-team-pic {
       position: absolute;
@@ -80,8 +83,8 @@
     }
   }
   & .accordion-team-about {
-    display: inline-block;
-    vertical-align: middle;
+    @include flex;
+    flex-direction: column;
     & .accordion-team-subtitle {
       font-family: "Ubuntu";
       font-size: rem(14px);

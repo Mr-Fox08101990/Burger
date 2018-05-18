@@ -11,25 +11,29 @@
 
 .reviews-list {
   margin-bottom: 0;
-  font-size: 0;
   height: 100%;
+  @include flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include equal(100%);
   & .reviews-item {
     text-align: center;
-    display: inline-block;
     position: relative;
     margin-right: 0;
-    vertical-align: middle;
     margin-bottom: 0;
     font-size: rem(14px);
-    float: left;
+    @include flex;
     width: 25%;
     height: 100%;
     & .reviews-image-block {
+      width: 100%;
       height: rem(500px);
       background: #27273e;
       position: relative;
       overflow: hidden;
       position: relative;
+      margin-right: 0;
+      @include flex;
       &:hover .reviews-block {
         left: 0;
         opacity: 1;

@@ -25,7 +25,7 @@
 }
 
 .nav-scroll__link {
-  display: block;
+  @include flex;
   @include equal(100%);
   position: relative;
   z-index: 150;

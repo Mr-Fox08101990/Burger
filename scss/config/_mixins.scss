@@ -5,6 +5,16 @@
   background-color: $color;
 }
 
+@mixin flex {
+  display: flex;
+  display: -webkit-flex;
+}
+
+@mixin inline-flex {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+}
+
 @mixin equal ($width) {
   width: $width;
   height: $width;
@@ -16,8 +26,10 @@
 
 @mixin pay-btn {
   padding-top: rem(15px);
+  @include flex;
+  justify-content: center;
+  align-items: center;
   &__link {
-    float: left;
     min-width: rem(100px);
     min-height: rem(40px);
     border-radius: rem(10px);

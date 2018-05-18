@@ -15,7 +15,11 @@ body {
 }
 
 .wrapper {
-  overflow: hidden;
+  position: relative;
+  @include equal(100%);
+  min-width: rem(940px) + rem(20px);
+  display: flex;
+  flex-direction: column;
 }
 
 .section {
@@ -25,7 +29,7 @@ body {
 
 .container {
   margin: 0 auto;
-  width: rem(1100px);
+  width: rem(940px);
   padding-left: rem(73px);
   position: relative;
   height: 100%;

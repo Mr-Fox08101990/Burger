@@ -23,6 +23,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -31,7 +32,7 @@
     <div class="maincontent">
       <section class="section hello" id="hello">
         <header class="header">
-          <div class="container clearfix">
+          <div class="container header__container">
             <div class="logo">
               <a href="" class="logo-link">
                 <img src="img/icons/logo.svg" alt="logo__image">
@@ -65,10 +66,10 @@
           </div>
         </header>
         <div class="content">
-          <div class="container clearfix">
+          <div class="container content__container">
             <div class="page-image">
               <img src="/img/steam.png" alt="" class="page-image__pic">
-              <img src="/img/icons/drops.svg" alt="" class="page-image__pic2">
+              <img src="/img/icons/drops.svg" alt="" class="page-image__pic2 visuallyhidden">
             </div>
             <div class="page-title">
               <h1 class="title">МЫ ДЕЛАЕМ</h1>
@@ -86,13 +87,13 @@
         </div>
       </section>
       <section class="section best" id="best">
-        <div class="container clearfix">
+        <div class="container">
           <main class="best-page">
             <div class="best-page__text">
               <h1 class="title best-title">МЫ ЛУЧШИЕ</h1>
             </div>
             <div class="about">
-              <ul class="about__list clearfix">
+              <ul class="about__list">
                 <li class="about__item">
                   <img src="/img/icons/meat.svg" alt="" class="about__pic">
                   <h2>100% свежее мясо</h2>
@@ -126,7 +127,7 @@
         </div>
       </section>
       <section class="section burgers" id="burgers">
-        <div class="container clearfix">
+        <div class="container">
           <div class="arrow-block-left">
             <a href="" class="arrow-burgers-left">
               <img src="/img/icons/arrow-scroll.svg" alt="" class="arrow-scroll-next-image">
@@ -134,7 +135,7 @@
           </div>
           <ul class="burgers__list">
             <li class="burgers__item">
-              <div class="about-burgers clearfix">
+              <div class="about-burgers">
                 <div class="about-burgers__left dark-burger">
                   <div class="burgers__composition">
                     <a href="" class="composition__link">
@@ -159,7 +160,7 @@
                         <p class="item__text2">150 г</p>
                       </li>
                       <li class="composition__item">
-                        <p class="item__text  item__text_cucumder">Овощи</p>
+                        <p class="item__text  item__text_cucumber">Овощи</p>
                         <p class="item__text2">200 г</p>
                       </li>
                       <li class="composition__item">
@@ -199,8 +200,7 @@
         </div>
       </section>
       <section class="section team" id="team">
-        <div class="container clearfix">
-          <div class="team-block">
+         <div class="team-block">
             <h1 class="title team-title">КОМАНДА</h1>
             <ul class="accordion-team-list">
               <li class="accordion-team-item">
@@ -277,17 +277,16 @@
               </li>
             </ul>
           </div>
-        </div>
       </section>
       <section class="section menu" id="menu">
-        <div class="container">
+        <div class="menu__block">
           <div class="section__title menu__title">Меню</div>
           <ul class="menu-acco">
             <li class="menu-acco__item">
               <a class="menu-acco__trigger" href="#" style="background-image: url('../img/menu/pic2.png')">
                 <div class="menu-acco__trigger-text">Для мясоедов</div>
                 </a>
-              <div class="menu-acco__content">
+              <div class="menu-acco__content visuallyhidden">
                 <div class="menu-acco__text">
                   Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
                   Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
@@ -300,7 +299,7 @@
             </li>
             <li class="menu-acco__item"><a class="menu-acco__trigger" href="#" style="background-image: url('../img/menu/pic3.png')">
                 <div class="menu-acco__trigger-text">Вегетарианское</div></a>
-              <div class="menu-acco__content">
+              <div class="menu-acco__content visuallyhidden">
                 <div class="menu-acco__text">
                   Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
                   Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
@@ -313,7 +312,7 @@
             </li>
             <li class="menu-acco__item"><a class="menu-acco__trigger" href="#" style="background-image: url('../img/menu/pic4.png')">
                 <div class="menu-acco__trigger-text">Диетическое</div></a>
-              <div class="menu-acco__content">
+              <div class="menu-acco__content visuallyhidden">
                 <div class="menu-acco__text">
                     Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
                     Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
@@ -329,7 +328,7 @@
       </section>
       <section class="section reviews" id="reviews">
         <div class="reviews-general">
-          <ul class="reviews-list clearfix">
+          <ul class="reviews-list">
             <li class="reviews-item">
               <div class="reviews-image-block" style="background: url(img/reviews/photo1.png) center center no-repeat; background-size: cover">
                 <!-- <img src="img/reviews/photo1.png" alt="" class="reviews-pic"> -->
@@ -454,13 +453,13 @@
         </div>
       </section>
       <section class="section order" id="order">
-        <div class="container clearfix">
+        <div class="container order__container">
           <div class="form-title">
             <h1 class="title">ЗАКАЖИТЕ ДОСТАВКУ</h1>
           </div>
           <form action="" class="form">
             <div class="form__left">
-              <div class="one-contacts-block clearfix">
+              <div class="one-contacts-block">
                 <label for="name" class="form__contacts">
                   <div class="form__text">Имя</div>
                   <input type="text" name="name" class="form__text-input" placeholder="Андрей">
@@ -476,7 +475,7 @@
                   <input type="text" name="adress-street" class="form__text-input" placeholder="ул.Бабушкина">
                 </label>
               </div>
-              <div class="three-contacts-block clearfix">
+              <div class="three-contacts-block">
                 <label for="adress" class="form__contacts">
                   <div class="form__text">Дом</div>
                   <input type="text" name="adress-house-number" class="form__text-input" placeholder="д.12">
@@ -504,7 +503,7 @@
               </div>
               <div class="form__bottons">
                 <div class="form__controls">
-                  <div class="one-controls-block clearfix">
+                  <div class="one-controls-block">
                     <label class="form__radio">
                       <input type="radio" name="review" class="form__radio-elem">
                       <div class="form__radio-fake"></div>
@@ -517,14 +516,14 @@
                     </label>
                   </div>
                   <div class="two-controls-block">
-                    <label class="form__radio clearfix">
+                    <label class="form__radio">
                       <input type="checkbox" name="review" class="form__radio-elem">
                       <div class="form__radio-fake"></div>
                       <div class="form__radio-text">Не перезванивать</div>
                     </label>
                   </div>
                 </div>
-                <div class="btns clearfix">
+                <div class="btns">
                   <div class="pay-btn">
                     <a href="#" class="pay-btn__link">Заказать</a>
                   </div>
@@ -541,7 +540,7 @@
         <div class="map-block">
           <iframe class="map-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2001.1639687035145!2d30.42208421639283!3d59.89622798186078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962fccc4c0512b%3A0xad34528f97d3c3e8!2z0YPQuy4g0JHQsNCx0YPRiNC60LjQvdCwLCAxMiwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MjAyOQ!5e0!3m2!1sru!2sru!4v1524668013178"></iframe>
         </div>
-        <footer class="footer clearfix">
+        <footer class="footer">
           <div class="footer__left">
             <div class="adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
             <div class="phone">

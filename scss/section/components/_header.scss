@@ -3,46 +3,60 @@
   margin-bottom: rem(20px);
 }
 
+.header__container {
+  @include flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+}
+
 .logo {
-  float: left;
-  width: 31%;
+  @include flex;
+  width: 20%;
   margin-right: rem(6px);
 }
 
 .nav {
-  float: left;
+  @include flex;
+  flex-wrap: nowrap;
   padding-top: rem(25px);
   margin-right: rem(15px);
-}
 
-.nav__item {
-  display: inline-block;
-  &::before {
-    @include circle(rem(8px), $white);
-    content: '';
-    display: inline-block;
-    margin-right: rem(10px);
-    margin-left: rem(10px);
-    vertical-align: middle;
-  }
-  &:first-child::before {
-    display: none;
-  }
-}
-
-.nav__link {
-  font-family: 'Lifehack';
-  font-size: rem(12px);
-  font-weight: 500;
-  font-style: normal;
-  text-align: center;
-  color: $white;
-  text-transform: uppercase;
-  &:hover {
-    border-bottom: rem(2px) solid $white;
+  & .nav__list {
+    @include flex;
+    align-items: center;
+  
+    & .nav__item {
+      @include inline-flex;
+      align-items: center;
+      &::before {
+        @include circle(rem(8px), $white);
+        content: '';
+        @include inline-flex;
+        margin-right: rem(10px);
+        margin-left: rem(10px);
+      }
+      &:first-child::before {
+        display: none;
+      }
+  
+      & .nav__link {
+        font-family: 'Lifehack';
+        font-size: rem(12px);
+        font-weight: 500;
+        font-style: normal;
+        text-align: center;
+        color: $white;
+        text-transform: uppercase;
+        &:hover {
+          border-bottom: rem(2px) solid $white;
+        }
+      }
+    }
   }
 }
 
 .pay-btn {
   @include pay-btn;
+  @include inline-flex;
 }

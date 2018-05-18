@@ -1,3 +1,13 @@
+.menu {
+  background: url(../img/menu/pic1.png) center center no-repeat;
+  background-size: cover;
+}
+
+.menu__block {
+  position: relative;
+  @include equal(100%);
+}
+
 .section__title {
    color: $orange;
    font-size: rem(72px);
@@ -23,13 +33,13 @@
    right: 0;
    top: 0;
    bottom: 0;
-   display: flex;
+   @include flex;
  }
 
  .menu-acco__item {
    height: 100%;
    border: rem(1px) solid black;
-   display: flex;
+   @include flex;
    &.active {
      .menu-acco__trigger-text {
        color: $orange;
@@ -39,7 +49,7 @@
 
  .menu-acco__trigger {
    width: rem(80px);
-   display: block;
+   @include flex;
    height: 100%;
    text-decoration: none;
    position: relative;
