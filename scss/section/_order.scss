@@ -9,187 +9,183 @@
     align-items: center;
     @include equal(100%);
   }
-}
 
-.form-title {
-  @include title;
-  text-align: center;
-  margin-bottom: rem(20px);
-}
-
-.form {
-  font-family: 'Ubuntu';
-  font-size: rem(14px);
-  font-weight: 300;
-  font-style: normal;
-  color: $white;
-  @include flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  &__left {
-    @include flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 50%;
-    & .one-contacts-block {
-      margin-bottom: rem(15px);
-      @include flex;
-      flex-direction: row;
-      & .form__contacts {
-        @include flex;
-        flex-wrap: wrap;
-        width: rem(256px);
-        padding-right: rem(20px);
-        text-align: left;
-        & .form__text {
-          margin-bottom: rem(10px);
-          text-align: left;
-        }
-        & .form__text-input {
-          @include form__text-input(100%);
-          text-align: left;
-        }
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-    }
-    & .two-contacts-block {
-      margin-bottom: rem(15px);
-      & .form__text {
-        margin-bottom: rem(10px);
-        text-align: left;
-      }
-      & .form__text-input {
-        @include form__text-input(100%);
-        text-align: left;
-      }
-      & .form__contacts {
-        @include flex;
-        flex-direction: column;
-        width: rem(513px);
-        text-align: left;
-      }
-    }
-    & .three-contacts-block {
-      @include flex;
-      flex-direction: row;
-      & .form__contacts {
-        @include flex;
-        flex-wrap: wrap;
-        width: rem(128px);
-        padding-right: rem(20px);
-        & .form__text {
-          margin-bottom: rem(10px);
-          text-align: center;
-        }
-        & .form__text-input {
-          @include form__text-input(100%);
-          text-align: center;
-        }
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-    }
+  .form-title {
+    @include title;
+    text-align: center;
+    margin-bottom: rem(20px);
   }
-  &__right {
+  
+  .form {
+    font-family: 'Ubuntu';
+    font-size: rem(14px);
+    font-weight: 300;
+    font-style: normal;
+    color: $white;
     @include flex;
-    flex-direction: column;
-    width: 50%;
-    padding-left: rem(30px);
-    & .form__area {
-      margin-bottom: rem(20px);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    &__left {
       @include flex;
       flex-direction: column;
-      & .form__area-label {
+      flex-wrap: wrap;
+      width: 50%;
+      & .one-contacts-block {
+        margin-bottom: rem(15px);
         @include flex;
-        flex-direction: column;
-        width: rem(460px);
-        margin-right: 0;
-        text-align: left;
+        flex-direction: row;
+        & .form__contacts {
+          @include flex;
+          flex-wrap: wrap;
+          width: rem(256px);
+          padding-right: rem(20px);
+          text-align: left;
+          & .form__text {
+            margin-bottom: rem(10px);
+            text-align: left;
+          }
+          & .form__text-input {
+            @include form__text-input(100%);
+            text-align: left;
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+      & .two-contacts-block {
+        margin-bottom: rem(15px);
         & .form__text {
           margin-bottom: rem(10px);
+          text-align: left;
         }
-        & .form__area-text {
-          font-family: 'Ubuntu';
-          font-size: rem(14px);
-          font-weight: 300;
-          font-style: normal;
-          height: rem(130px);
-          width: 100%;
-          border: none;
-          border-radius: rem(5px);
-          padding: rem(5px) rem(10px);
-          border: rem(1px) solid transparent;
-          &:focus {
-            border-color: $red;
-            outline: none;
+        & .form__text-input {
+          @include form__text-input(100%);
+          text-align: left;
+        }
+        & .form__contacts {
+          @include flex;
+          flex-direction: column;
+          width: rem(513px);
+          text-align: left;
+        }
+      }
+      & .three-contacts-block {
+        @include flex;
+        flex-direction: row;
+        & .form__contacts {
+          @include flex;
+          flex-wrap: wrap;
+          width: rem(128px);
+          padding-right: rem(20px);
+          & .form__text {
+            margin-bottom: rem(10px);
+            text-align: center;
+          }
+          & .form__text-input {
+            @include form__text-input(100%);
+            text-align: center;
+          }
+          &:last-child {
+            padding-right: 0;
           }
         }
       }
     }
-    
-    & .form__controls {
-      margin-bottom: rem(5px);
-      & .one-controls-block {
-        margin-bottom: rem(10px);
+    &__right {
+      @include flex;
+      flex-direction: column;
+      width: 50%;
+      padding-left: rem(30px);
+      & .form__area {
+        margin-bottom: rem(20px);
         @include flex;
-        flex-direction: row;
-        align-items: center;
-        & .form__radio {
+        flex-direction: column;
+        & .form__area-label {
           @include flex;
-          align-items: center;
-          width: rem(160px);
-          &:first-child {
-            margin-right: rem(10px);
+          flex-direction: column;
+          width: rem(460px);
+          margin-right: 0;
+          text-align: left;
+          & .form__text {
+            margin-bottom: rem(10px);
+          }
+          & .form__area-text {
+            font-family: 'Ubuntu';
+            font-size: rem(14px);
+            font-weight: 300;
+            font-style: normal;
+            height: rem(130px);
+            width: 100%;
+            border: none;
+            border-radius: rem(5px);
+            padding: rem(5px) rem(10px);
+            border: rem(1px) solid transparent;
+            &:focus {
+              border-color: $red;
+              outline: none;
+            }
           }
         }
-      }
-      & .two-controls-block {
-        @include flex;
-        flex-direction: row;
-        align-items: center;
-
-        & .form__radio {
-          @include flex;
-          align-items: center;
-          margin-right: rem(10px);
-        }   
-      }
-
-      & .form__radio-elem,
-      & .form__radio-fake {
-        @include flex;
-        margin-right: rem(10px);
       }
       
-      & .form__radio-text {
+      & .form__controls {
+        margin-bottom: rem(5px);
+        & .one-controls-block {
+          margin-bottom: rem(10px);
+          @include flex;
+          flex-direction: row;
+          align-items: center;
+          & .form__radio {
+            @include flex;
+            align-items: center;
+            width: rem(160px);
+            &:first-child {
+              margin-right: rem(10px);
+            }
+          }
+        }
+        & .two-controls-block {
+          @include flex;
+          flex-direction: row;
+          align-items: center;
+  
+          & .form__radio {
+            @include flex;
+            align-items: center;
+            margin-right: rem(10px);
+          }   
+        }
+  
+        & .form__radio-elem,
+        & .form__radio-fake {
+          @include flex;
+          margin-right: rem(10px);
+        }
+        
+        & .form__radio-text {
+          @include flex;
+        }
+      }
+      
+      & .btns {
         @include flex;
-      }
-    }
-    
-    & .btns {
-      @include flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      &.pay-btn {
-        @include pay-btn;
-      }
-      & .reset-btn {
-        @include pay-btn;
-        margin-left: rem(10px);
-        &__link {
-          background-color: $blue;
-          &:hover {
-            background-color: $dark;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        & .pay-btn {
+          @include btn;
+        }
+        & .reset-btn {
+          @include btn;
+          margin-left: rem(10px);
+          &__link {
+            background-color: $blue;
+            &:hover {
+              background-color: $dark;
+            }
           }
         }
       }
     }
   }
 }
-
-
-
-

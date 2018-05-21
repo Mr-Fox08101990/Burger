@@ -24,7 +24,7 @@
   @return ($px / 16px) + rem;
 }
 
-@mixin pay-btn {
+@mixin btn {
   padding-top: rem(15px);
   @include flex;
   justify-content: center;

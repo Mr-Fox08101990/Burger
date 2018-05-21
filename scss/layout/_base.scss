@@ -22,9 +22,16 @@ body {
   flex-direction: column;
 }
 
+.maincontent {
+  width: 100%;
+  height: 100%;
+}
+
 .section {
   height: 100vh;
   min-height: rem(650px);
+  min-width: rem(940px);
+  display: flex;
 }
 
 .container {
@@ -33,6 +40,8 @@ body {
   padding-left: rem(73px);
   position: relative;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 *,
@@ -72,4 +81,10 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
 }
