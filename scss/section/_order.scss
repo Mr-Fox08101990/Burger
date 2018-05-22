@@ -23,8 +23,6 @@
     font-style: normal;
     color: $white;
     @include flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     &__left {
       @include flex;
       flex-direction: column;
