@@ -24,6 +24,7 @@ body {
 
 .maincontent {
   @include equal(100%);
+  overflow-x: hidden;
 }
 
 .section {
