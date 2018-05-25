@@ -5,7 +5,7 @@
   z-index: 100;
 
   .nav-scroll__item {
-    @include equal(20px);
+    @include equal(rem(20px));
     border-radius: 50%;
     position: relative;
     margin-bottom: rem(20px);
@@ -21,6 +21,10 @@
       transform: translate(-50%, -50%);
       z-index: 50;
     }
+
+    &:hover .nav-scroll-text {
+      opacity: 1;
+    }
   }
   
   .nav-scroll__link {
@@ -28,6 +32,21 @@
     @include equal(100%);
     position: relative;
     z-index: 150;
+
+    .nav-scroll-text{
+      position: absolute;
+      top: 30%;
+      right: 160%;
+      font-family: 'Lifehack';
+      font-size: rem(10px);
+      font-weight: 500;
+      font-style: normal;
+      text-align: center;
+      color: burlywood;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 1s;
+    }
   }
 }
 

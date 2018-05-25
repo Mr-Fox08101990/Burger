@@ -31,7 +31,7 @@
        height: 100%;
        border: rem(1px) solid black;
        @include flex;
-       &--active {
+       &--active.menu-acco__item--active {
         & .menu-acco__trigger-text {
           color: $orange;
         }
@@ -40,16 +40,16 @@
           width: rem(540px);
         }
   
-        & + .menu-acco__text {
+        & .menu-acco__text {
           animation: acco-text .8s linear forwards;
-        }
-       
-        @keyframes acco-text {
-          75% {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
+
+          @keyframes acco-text {
+            75% {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
           }
         }
        }
@@ -86,7 +86,7 @@
       .menu-acco__content {
         height: 100%;
         background: rgba($blue, .93);
-        width: rem(0);
+        width: rem(0px);
         overflow: hidden;
         transition: width .6s;
   

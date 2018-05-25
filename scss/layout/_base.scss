@@ -17,7 +17,7 @@ body {
 .wrapper {
   position: relative;
   @include equal(100%);
-  min-width: rem(940px) + rem(20px);
+  min-width: rem(940px + 20px);
   display: flex;
   flex-direction: column;
 }
