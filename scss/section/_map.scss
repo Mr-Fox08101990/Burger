@@ -25,13 +25,15 @@
     right: 0;
 
     &__container {
+      @include equal (100%);
       flex-direction: row;
       align-items: center;
     }
 
     &__left {
       @include flex;
-      width: 90%;
+      margin-right: auto;
+      width: 100%;
       flex-direction: column;
       padding-left: rem(20px);
       padding-bottom: rem(5px);
@@ -73,7 +75,6 @@
     }
     &__right {
       @include flex;
-      width: 10%;
       padding-top: rem(10px);
       padding-right: rem(20px);
       padding-bottom: rem(5px);

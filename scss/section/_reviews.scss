@@ -23,6 +23,11 @@
         @include flex;
         width: 25%;
         height: 100%;
+
+        @include tablets {
+          width: 50%;
+          height: 100%;
+        }
         & .reviews-image-block {
           width: 100%;
           height: rem(500px);

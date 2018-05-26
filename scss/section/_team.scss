@@ -11,17 +11,33 @@
     height: 100%;
     @include flex;
     flex-direction: column;
+    align-items: center;
     background-color: rgba(47, 50, 52, 0.93);
     padding: rem(100px) rem(100px);
+
+    @include tablets {
+      width: 100%;
+      text-align: center;
+      padding-top: 30%;
+    }
+
     & .team-title {
       @include title;
       text-align: left;
       margin-bottom: rem(20px);
+
+      @include tablets {
+        text-align: center;
+      }
     }
 
     .accordion-team-item {
       margin-bottom: rem(30px);
       width: rem(370px);
+
+      @include tablets {
+        margin: 0 auto rem(20px) auto;
+      }
     
       .accordion-link-title {
         font-family: "Gagalin";
@@ -31,6 +47,7 @@
         color: $white;
         text-align: left;
         margin-bottom: rem(15px);
+
         &::before {
           content: '';
           display: inline-block;
@@ -40,10 +57,20 @@
           border-bottom-width: 0;
           margin-right: rem(5px);
         }
+
+        @include tablets {
+          text-align: center;
+        }
       }
       
       .accordion-team-dropdown {
         display: none;
+
+        @include tablets {
+          flex-direction: column;
+          align-items: center;
+        }
+
         & .accordion-team-left {
           @include equal(rem(100px));
           border-radius: 50%;
@@ -52,7 +79,12 @@
           margin-right: rem(15px);
           @include flex;
           vertical-align: middle;
-          &+.accordion-team-pic {
+
+          @include tablets {
+            margin-bottom: 5%;
+          }
+
+          & .accordion-team-pic {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -64,6 +96,11 @@
         & .accordion-team-about {
           @include flex;
           flex-direction: column;
+
+          @include tablets {
+            align-items: center;
+          }
+
           & .accordion-team-subtitle {
             font-family: "Ubuntu";
             font-size: rem(14px);
@@ -79,6 +116,10 @@
             font-style: normal;
             color: $white;
             text-align: left;
+
+            @include tablets {
+              text-align: center;
+            }
           }
         }
       }

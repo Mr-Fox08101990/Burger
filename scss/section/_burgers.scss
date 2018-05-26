@@ -3,10 +3,14 @@
   position: relative;
   padding: rem(100px) rem(200px);
   height: 100vh;
+  
+  @include tablets {
+    padding: rem(100px) rem(30px);
+  }
 
   .burgers__list {
     @include flex;
-    width: 80%;
+    width: 90%;
     height: 100%;
     margin-right: 5%;
     margin-left: 5%;
@@ -15,23 +19,39 @@
       height: rem(650px);
       @include flex;
   
-      @each $images-acc in dark,
-      cheeseburger,
-      chiken,
-      sandwich,
-      spicy {
-        .#{$images-acc}-burger {
-          background: url("../img/Burgers/#{$images-acc}.png") center center no-repeat;
-          background-size: contain;
-        }
+      @include tablets {
+        flex-direction: column;
+        height: auto;
       }
+
+      // @each $images-acc in dark,
+      // cheeseburger,
+      // chiken,
+      // sandwich,
+      // spicy {
+      //   .#{$images-acc}-burger {
+      //     background: url("../img/Burgers/#{$images-acc}.png") center center no-repeat;
+      //     background-size: contain;
+      //   }
+      // }
   
       &__left {
         @include flex;
         width: 50%;
-        height: 100%;
         position: relative;
+        flex-direction: column;
+        justify-content: space-between;
   
+        @include tablets {
+          width: 100%;
+          flex-direction: row;
+          justify-content: flex-start;
+
+          & * {
+            flex: 1 1 auto;
+          }
+        }
+
         .composition__link {
           background-color: $orange2;
           @include equal(rem(90px));
@@ -122,10 +142,13 @@
         }
   
         .burgers__ccal {
-          position: absolute;
-          bottom: 0;
           font-family: "Gagalin";
           color: $grey;
+
+          @include tablets {
+            width: 100%;
+            height: auto;
+          }
           & .ccal-val {
             background: url("../img/icons/kkal.svg") center center no-repeat;
             background-size: contain;
@@ -148,10 +171,17 @@
         @include flex;
         flex-direction: column;
         width: 50%;
-        height: 100%;
         padding-top: rem(70px);
         padding-left: rem(40px);
   
+        @include tablets {
+          flex-direction: column;
+          width: 100%;
+          text-align: center;
+          padding-top: 5%;
+          padding-left: 0;
+        }
+
         .burger-title {
           @include title;
           font-size: rem(48px);
@@ -170,11 +200,19 @@
           line-height: 1.42;
           color: $black;
           margin-bottom: rem(50px);
+
+          @include tablets {
+            text-align: center;
+          }
         }
         
         .about-burgers__pay {
           @include flex;
           align-items: center;
+
+          @include tablets {
+            justify-content: center;
+          }
           & .pay-price {
             font-size: rem(72px);
             font-family: "Gagalin";

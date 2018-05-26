@@ -12,9 +12,6 @@
       font-family: "Gagalin";
       font-weight: 700;
       margin-bottom: rem(12px);
-    }
-   
-    .menu__title {
       position: absolute;
       top: 10%;
       left: 10%;
@@ -29,7 +26,6 @@
  
       .menu-acco__item {
        height: 100%;
-       border: rem(1px) solid black;
        @include flex;
        &--active.menu-acco__item--active {
         & .menu-acco__trigger-text {
@@ -38,6 +34,10 @@
   
         & .menu-acco__content {
           width: rem(540px);
+
+          @include tablets {
+            width: rem(350px);
+          }
         }
   
         & .menu-acco__text {

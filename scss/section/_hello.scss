@@ -6,7 +6,11 @@
 
   .header {
     padding-top: rem(10px);
-    margin-bottom: rem(20px);
+    margin-bottom: 15%;
+
+    @include tablets {
+      margin-bottom: 5%;
+    }
   
     .header__container {
       @include flex;
@@ -74,23 +78,53 @@
     flex: 1;
     align-items: center;
     align-content: center;
-  
+
     & .content__container {
       @include flex;
       flex: 1;
       align-content: center;
-  
+      @include equal (100%);
+     
+      @include tablets {
+        @include flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: rem(20px);
+      }
+
       .page-image {
         float: left;
         position: relative;
         width: 50%;
-        padding-left: rem(10px);
+        height: 100%;
+        margin-right: rem(40px);
+        
+        @include tablets {
+          @include equal (100%);
+          margin-left: 40%;
+        }
+
         &__pic {
           position: absolute;
+          padding-left: rem(30px);
+
+          @include tablets {
+            width: auto;
+          }
         }
         &__pic2 {
           position: absolute;
           padding-top: rem(60px);
+          opacity: 0;
+
+          &:hover {
+            opacity: 1;
+            transition: opacity 1s;
+          }
+          
+          @include tablets {
+            width: auto;
+          }
         }
       }
       
@@ -98,6 +132,11 @@
         float: left;
         width: 50%;
         padding-top: rem(130px);
+        
+        @include tablets {
+          text-align: center;
+        }
+
         .title {
           @include title;
         }
@@ -117,6 +156,6 @@
     left: 0;
     right: 0;
     text-align: center;
-    margin-bottom: rem(100px);
+    margin-bottom: rem(50px);
   }
 }
