@@ -8,6 +8,14 @@
     padding-top: rem(10px);
     margin-bottom: 15%;
 
+    @include desktop {
+      margin-bottom: 0%;
+    }
+    
+    @include laptop {
+      margin-bottom: 0%;
+    }
+
     @include tablets {
       margin-bottom: 5%;
     }
@@ -69,6 +77,7 @@
       @include btn;
       @include inline-flex;
     }
+
   }
 
   .header__content {

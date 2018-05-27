@@ -6,7 +6,7 @@
   position: relative;
   & .map-block {
     width: 100%;
-    height: 94%;
+    height: 93%;
     & .map-image {
       @include equal(100%);
     }
@@ -16,7 +16,7 @@
     padding-top: rem(5px);
     background-color: $dark;
     width: 100%;
-    height: 6%;
+    height: 7%;
     @include flex;
     flex-direction: row;
     position: absolute;
@@ -37,6 +37,7 @@
       flex-direction: column;
       padding-left: rem(20px);
       padding-bottom: rem(5px);
+      padding-top: rem(5px);
       & .adress {
         font-family: 'Ubuntu';
         font-size: rem(14px);
@@ -75,7 +76,7 @@
     }
     &__right {
       @include flex;
-      padding-top: rem(10px);
+      padding-top: rem(5px);
       padding-right: rem(20px);
       padding-bottom: rem(5px);
       & .social-list {

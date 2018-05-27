@@ -35,6 +35,10 @@
         & .menu-acco__content {
           width: rem(540px);
 
+          @include desktop {
+            width: rem(450px);
+          }
+
           @include tablets {
             width: rem(350px);
           }
@@ -80,6 +84,10 @@
           left: 50%;
           top: 100%;
           margin-top: rem(-20px);
+
+          @include desktop {
+            top: 93%;
+          }
         }
       }
   

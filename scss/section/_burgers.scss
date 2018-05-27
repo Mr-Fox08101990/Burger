@@ -3,6 +3,10 @@
   position: relative;
   padding: rem(100px) rem(200px);
   height: 100vh;
+
+  @include desktop {
+    padding: rem(40px) rem(80px);
+  }
   
   @include tablets {
     padding: rem(100px) rem(30px);
@@ -18,7 +22,11 @@
     .about-burgers {
       height: rem(650px);
       @include flex;
-  
+
+      @include desktop {
+        height: rem(500px);
+      }
+      
       @include tablets {
         flex-direction: column;
         height: auto;
@@ -173,6 +181,10 @@
         width: 50%;
         padding-top: rem(70px);
         padding-left: rem(40px);
+
+        @include desktop {
+          padding-top: 0;
+        }
   
         @include tablets {
           flex-direction: column;

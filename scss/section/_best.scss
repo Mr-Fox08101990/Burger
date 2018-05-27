@@ -3,6 +3,10 @@
   background-size: cover;
   padding-top: rem(150px);
 
+  @include desktop {
+    padding-top: rem(100px);
+  }
+
   .best-page {
     width: 100%;
     min-height: rem(650px);

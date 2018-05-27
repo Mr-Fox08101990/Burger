@@ -143,6 +143,12 @@ a {
   .hello .header {
     padding-top: 0.625rem;
     margin-bottom: 15%; }
+    @media screen and (min-width: 993px) and (max-width: 1366px) {
+      .hello .header {
+        margin-bottom: 0%; } }
+    @media screen and (max-width: 992px) {
+      .hello .header {
+        margin-bottom: 0%; } }
     @media screen and (max-width: 768px) {
       .hello .header {
         margin-bottom: 5%; } }
@@ -349,6 +355,9 @@ a {
   background: url(../img/bg.png) center center no-repeat;
   background-size: cover;
   padding-top: 9.375rem; }
+  @media screen and (min-width: 993px) and (max-width: 1366px) {
+    .best {
+      padding-top: 6.25rem; } }
   .best .best-page {
     width: 100%;
     min-height: 40.625rem; }
@@ -419,6 +428,9 @@ a {
   position: relative;
   padding: 6.25rem 12.5rem;
   height: 100vh; }
+  @media screen and (min-width: 993px) and (max-width: 1366px) {
+    .burgers {
+      padding: 2.5rem 5rem; } }
   @media screen and (max-width: 768px) {
     .burgers {
       padding: 6.25rem 1.875rem; } }
@@ -437,6 +449,9 @@ a {
       display: -ms-flexbox;
       display: flex;
       display: -webkit-flex; }
+      @media screen and (min-width: 993px) and (max-width: 1366px) {
+        .burgers .burgers__list .about-burgers {
+          height: 31.25rem; } }
       @media screen and (max-width: 768px) {
         .burgers .burgers__list .about-burgers {
           -webkit-box-orient: vertical;
@@ -661,6 +676,9 @@ a {
         width: 50%;
         padding-top: 4.375rem;
         padding-left: 2.5rem; }
+        @media screen and (min-width: 993px) and (max-width: 1366px) {
+          .burgers .burgers__list .about-burgers__right {
+            padding-top: 0; } }
         @media screen and (max-width: 768px) {
           .burgers .burgers__list .about-burgers__right {
             -webkit-box-orient: vertical;
@@ -963,6 +981,9 @@ a {
           color: #f9b43b; }
         .menu .menu__block .menu-acco .menu-acco__item--active.menu-acco__item--active .menu-acco__content {
           width: 33.75rem; }
+          @media screen and (min-width: 993px) and (max-width: 1366px) {
+            .menu .menu__block .menu-acco .menu-acco__item--active.menu-acco__item--active .menu-acco__content {
+              width: 28.125rem; } }
           @media screen and (max-width: 768px) {
             .menu .menu__block .menu-acco .menu-acco__item--active.menu-acco__item--active .menu-acco__content {
               width: 21.875rem; } }
@@ -1013,6 +1034,9 @@ a {
             left: 50%;
             top: 100%;
             margin-top: -1.25rem; }
+            @media screen and (min-width: 993px) and (max-width: 1366px) {
+              .menu .menu__block .menu-acco .menu-acco__item .menu-acco__trigger-text {
+                top: 93%; } }
         .menu .menu__block .menu-acco .menu-acco__item .menu-acco__content {
           height: 100%;
           background: rgba(47, 50, 52, 0.93);
@@ -1085,6 +1109,9 @@ a {
           display: -ms-flexbox;
           display: flex;
           display: -webkit-flex; }
+          @media screen and (min-width: 993px) and (max-width: 1366px) {
+            .reviews-general .reviews-list .reviews-item .reviews-image-block {
+              height: 18.75rem; } }
           .reviews-general .reviews-list .reviews-item .reviews-image-block:hover .reviews-block {
             left: 0;
             opacity: 1; }
@@ -1160,6 +1187,9 @@ a {
   background-size: cover;
   padding-top: 6.25rem;
   width: 100%; }
+  @media screen and (min-width: 993px) and (max-width: 1366px) {
+    .order {
+      padding-top: 0; } }
   .order .order__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1514,7 +1544,7 @@ a {
   position: relative; }
   .map .map-block {
     width: 100%;
-    height: 94%; }
+    height: 93%; }
     .map .map-block .map-image {
       width: 100%;
       height: 100%; }
@@ -1522,7 +1552,7 @@ a {
     padding-top: 0.3125rem;
     background-color: #1f2122;
     width: 100%;
-    height: 6%;
+    height: 7%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1557,7 +1587,8 @@ a {
       -ms-flex-direction: column;
       flex-direction: column;
       padding-left: 1.25rem;
-      padding-bottom: 0.3125rem; }
+      padding-bottom: 0.3125rem;
+      padding-top: 0.3125rem; }
       .map .footer__left .adress {
         font-family: 'Ubuntu';
         font-size: 0.875rem;
@@ -1600,7 +1631,7 @@ a {
       display: -ms-flexbox;
       display: flex;
       display: -webkit-flex;
-      padding-top: 0.625rem;
+      padding-top: 0.3125rem;
       padding-right: 1.25rem;
       padding-bottom: 0.3125rem; }
       .map .footer__right .social-list {
