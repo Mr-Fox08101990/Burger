@@ -17,7 +17,11 @@
     }
 
     @include tablets {
-      margin-bottom: 5%;
+      margin-bottom: 0%;
+    }
+
+    @include phones {
+      margin-bottom: 0%;
     }
   
     .header__container {
@@ -30,7 +34,6 @@
     .logo {
       @include flex;
       margin-right: auto;
-      width: 20%;
     }
     
     .nav {
@@ -39,6 +42,14 @@
       padding-top: rem(25px);
       margin-right: rem(15px);
     
+      @include tablets {
+        display: none;
+      }
+
+      @include phones {
+        display: none;
+      }
+
       & .nav__list {
         @include flex;
         align-items: center;
@@ -88,6 +99,14 @@
     align-items: center;
     align-content: center;
 
+    @include tablets {
+      margin-bottom: 8%;
+    }
+
+    @include phones {
+      margin-bottom: 30%;
+    }
+
     & .content__container {
       @include flex;
       flex: 1;
@@ -98,7 +117,14 @@
         @include flex;
         flex-direction: column;
         align-items: center;
-        margin-left: rem(20px);
+        // margin-left: rem(20px);
+      }
+
+      @include phones {
+        @include flex;
+        flex-direction: column;
+        align-items: center;
+        // margin-left: rem(20px);
       }
 
       .page-image {
@@ -108,9 +134,25 @@
         height: 100%;
         margin-right: rem(40px);
         
+        @include desktop {
+          margin-right: 0;
+        }
+
+        @include laptop {
+          margin-right: 0;
+        }
+
         @include tablets {
-          @include equal (100%);
-          margin-left: 40%;
+          width: 100%;
+          height: 60%;
+          margin-left: 3%;
+          margin-bottom: 1%;
+        }
+
+        @include phones {
+          width: 100%;
+          height: 70%;
+          margin-bottom: 1%;
         }
 
         &__pic {
@@ -118,7 +160,17 @@
           padding-left: rem(30px);
 
           @include tablets {
+            margin-left: 17%;
             width: auto;
+            height: 100%;
+            padding-left: 0;
+          }
+
+          @include phones {
+            margin-left: 20%;
+            width: auto;
+            height: 100%;
+            padding-left: 0;
           }
         }
         &__pic2 {
@@ -133,6 +185,18 @@
           
           @include tablets {
             width: auto;
+            height: 60%;
+            margin-left: 10%;
+            margin-top: 10%;
+            padding-top: 0;
+          }
+
+          @include phones {
+            width: auto;
+            height: 60%;
+            margin-left: 15%;
+            margin-top: 10%;
+            padding-top: 0;
           }
         }
       }
@@ -144,16 +208,39 @@
         
         @include tablets {
           text-align: center;
+          padding-top: 5%;
+        }
+
+        @include phones {
+          text-align: center;
+          padding-top: 0%;
+          width: auto;
         }
 
         .title {
           @include title;
+
+          @include tablets {
+            font-size: rem(72px);
+          }
+
+          @include phones {
+            font-size: rem(36px);
+          }
         }
         .subtitle {
           font-size: rem(65px);
           font-family: "Lifehack";
           color: $white;
           font-style: italic;
+
+          @include tablets {
+            font-size: rem(72px);
+          }
+
+          @include phones {
+            font-size: rem(36px);
+          }
         }
       }
     }
@@ -166,5 +253,13 @@
     right: 0;
     text-align: center;
     margin-bottom: rem(50px);
+
+    @include tablets {
+      margin-bottom: rem(20px);
+    }
+
+    @include phones {
+      margin-bottom: 20%;
+    }
   }
 }

@@ -21,12 +21,22 @@
       padding-top: 30%;
     }
 
+    @include phones {
+      width: 100%;
+      text-align: center;
+      padding-top: 10%;
+    }
+
     & .team-title {
       @include title;
       text-align: left;
       margin-bottom: rem(20px);
 
       @include tablets {
+        text-align: center;
+      }
+
+      @include phones {
         text-align: center;
       }
     }
@@ -36,6 +46,10 @@
       width: rem(370px);
 
       @include tablets {
+        margin: 0 auto rem(20px) auto;
+      }
+
+      @include phones {
         margin: 0 auto rem(20px) auto;
       }
     
@@ -61,12 +75,21 @@
         @include tablets {
           text-align: center;
         }
+
+        @include phones {
+          text-align: center;
+        }
       }
       
       .accordion-team-dropdown {
         display: none;
 
         @include tablets {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        @include phones {
           flex-direction: column;
           align-items: center;
         }
@@ -81,6 +104,10 @@
           vertical-align: middle;
 
           @include tablets {
+            margin-bottom: 5%;
+          }
+
+          @include phones {
             margin-bottom: 5%;
           }
 
@@ -101,6 +128,10 @@
             align-items: center;
           }
 
+          @include phones {
+            align-items: center;
+          }
+
           & .accordion-team-subtitle {
             font-family: "Ubuntu";
             font-size: rem(14px);
@@ -118,6 +149,10 @@
             text-align: left;
 
             @include tablets {
+              text-align: center;
+            }
+
+            @include phones {
               text-align: center;
             }
           }

@@ -24,10 +24,20 @@
     left: 0;
     right: 0;
 
+    @include phones {
+      flex-direction: column;
+      height: auto;
+    }
+
     &__container {
       @include equal (100%);
       flex-direction: row;
       align-items: center;
+
+      @include phones {
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     &__left {
@@ -38,6 +48,13 @@
       padding-left: rem(20px);
       padding-bottom: rem(5px);
       padding-top: rem(5px);
+
+      @include phones {
+        align-items: center;
+        text-align: center;
+        padding: 0 0;
+      }
+
       & .adress {
         font-family: 'Ubuntu';
         font-size: rem(14px);
@@ -50,6 +67,11 @@
       & .phone {
         width: 30%;
 
+        @include phones {
+          width: 100%;
+          padding: 0 rem(120px);
+        }
+
         .phone-numder {
           font-family: 'Ubuntu';
           font-weight: 700;
@@ -60,13 +82,16 @@
           padding-top: rem(2px);
           @include flex;
           align-items: center;
+
+          
+
           &:hover {
             color: $white;
             text-decoration: underline;
           }
           &::before {
             content: " ";
-            @include equal(rem(11px));
+            @include equal(rem(16px));
             background: url(/img/icons/phone.svg) center center no-repeat;
             @include flex;
             margin-right: rem(6px);
@@ -84,6 +109,11 @@
         @include flex;
         flex-direction: row;
         flex-wrap: nowrap;
+
+        @include phones {
+          padding-left: rem(40px);
+        }
+
         & .social-item {
           @include flex;
           margin-right: rem(20px);

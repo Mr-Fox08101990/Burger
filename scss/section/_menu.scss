@@ -42,6 +42,10 @@
           @include tablets {
             width: rem(350px);
           }
+
+          @include phones {
+            width: 100%;
+          }
         }
   
         & .menu-acco__text {
@@ -64,6 +68,11 @@
         height: 100%;
         text-decoration: none;
         position: relative;
+
+        @include phones {
+          width: rem(40px);
+        }
+
         &:before {
           content: "";
           position:absolute;
@@ -99,7 +108,7 @@
         transition: width .6s;
   
         .menu-acco__text {
-          font-size: 14px;
+          font-size: rem(14px);
           font-family: 'Ubuntu';
           font-weight: 300;
           color: $white;

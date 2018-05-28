@@ -12,6 +12,10 @@
     padding: rem(100px) rem(30px);
   }
 
+  @include phones {
+    padding: rem(50px) rem(10px);
+  }
+
   .burgers__list {
     @include flex;
     width: 90%;
@@ -19,241 +23,323 @@
     margin-right: 5%;
     margin-left: 5%;
 
-    .about-burgers {
-      height: rem(650px);
-      @include flex;
+    .burgers__item {
+      @include equal (100%);
+      padding-top: 10%;
 
-      @include desktop {
-        height: rem(500px);
-      }
-      
-      @include tablets {
-        flex-direction: column;
-        height: auto;
+      @include phones {
+
       }
 
-      // @each $images-acc in dark,
-      // cheeseburger,
-      // chiken,
-      // sandwich,
-      // spicy {
-      //   .#{$images-acc}-burger {
-      //     background: url("../img/Burgers/#{$images-acc}.png") center center no-repeat;
-      //     background-size: contain;
-      //   }
-      // }
-  
-      &__left {
+      .about-burgers {
+        height: rem(650px);
         @include flex;
-        width: 50%;
-        position: relative;
-        flex-direction: column;
-        justify-content: space-between;
   
-        @include tablets {
-          width: 100%;
-          flex-direction: row;
-          justify-content: flex-start;
-
-          & * {
-            flex: 1 1 auto;
-          }
-        }
-
-        .composition__link {
-          background-color: $orange2;
-          @include equal(rem(90px));
-          border-radius: rem(5px);
-          @include flex;
-          flex-direction: column;
-          align-items: center;
-          padding: rem(14px) rem(20px);
-          transition: 0.2s;
-          &:hover {
-            background-color: $red;
-          }
-          &:hover+.composition__list {
-            left: rem(90px);
-            top: 0px;
-            opacity: 1;
-          }
-          & .link-text {
-            font-family: "Gagalin";
-            color: $white;
-            text-transform: uppercase;
-            text-decoration: none;
-          }
+        @include desktop {
+          height: rem(500px);
         }
         
-        .composition__list {
-          position: absolute;
-          left: rem(-9999px);
-          opacity: 0;
-          font-size: 0;
-          width: rem(280px);
-          background-color: $grey;
-          border-radius: rem(5px);
-          padding: rem(20px);
-          transition: left 0s;
-          transition: opacity 1s;
-          &:hover {
-            left: rem(90px);
-            top: 0;
-            opacity: 1;
-          }
-      
-          .composition__item {
-            margin-bottom: rem(15px);
-            @include flex;
-            flex-wrap: nowrap;
-            &:last-child {
-              margin-bottom: 0;
-            }
-  
-            @each $items-acc in beef,
-            buns,
-            salad,
-            sauce,
-            cucumber,
-            cheese {
-              .item__text_#{$items-acc}::before {
-                content: '';
-                @include flex;
-                @include equal(rem(45px));
-                background: url("../img/icons/#{$items-acc}.svg") center center no-repeat;
-                background-size: contain;
-                vertical-align: middle;
-                margin-right: rem(20px);
-              }
-            }
-  
-            & .item__text {
-              width: 70%;
-              font-family: "Ubuntu";
-              font-weight: 700;
-              font-size: rem(14px);
-              margin: 0;
-              @include flex;
-              font-size: rem(14px);
-              margin: 0;
-            }
-            & .item__text2 {
-              width: 30%;
-              text-align: right;
-              font-size: rem(14px);
-              margin: 0;
-              @include flex;
-              font-size: rem(14px);
-              margin: 0;
-            }
-          }
+        @include tablets {
+          flex-direction: column;
+          height: auto;
+          padding-top: 10%;
         }
   
-        .burgers__ccal {
-          font-family: "Gagalin";
-          color: $grey;
-
+        @include phones {
+          flex-direction: column;
+          height: auto;
+          padding-top: 10%;
+        }
+  
+        // @each $images-acc in dark,
+        // cheeseburger,
+        // chiken,
+        // sandwich,
+        // spicy {
+        //   .#{$images-acc}-burger {
+        //     background: url("../img/Burgers/#{$images-acc}.png") center center no-repeat;
+        //     background-size: contain;
+        //   }
+        // }
+    
+        &__left {
+          @include flex;
+          width: 50%;
+          position: relative;
+          flex-direction: column;
+          justify-content: space-between;
+    
           @include tablets {
             width: 100%;
-            height: auto;
-          }
-          & .ccal-val {
-            background: url("../img/icons/kkal.svg") center center no-repeat;
-            background-size: contain;
-            @include equal(rem(60px));
-            color: $white;
-            opacity: 0.5;
-            text-align: center;
-            padding-top: rem(30px);
-            margin: 0;
-          }
-          & .ccal-text {
-            margin-top: rem(7px);
-            margin-bottom: 0;
-            text-align: center;
-            width: rem(60px);
-          }
-        }
-      }
-      &__right {
-        @include flex;
-        flex-direction: column;
-        width: 50%;
-        padding-top: rem(70px);
-        padding-left: rem(40px);
-
-        @include desktop {
-          padding-top: 0;
-        }
+            flex-direction: row;
+            justify-content: flex-start;
   
-        @include tablets {
-          flex-direction: column;
-          width: 100%;
-          text-align: center;
-          padding-top: 5%;
-          padding-left: 0;
-        }
-
-        .burger-title {
-          @include title;
-          font-size: rem(48px);
-          line-height: 1.42;
-          color: $white;
-          margin-bottom: rem(30px);
-        }
-        
-        .about-burgers__text {
-          font-family: 'Ubuntu';
-          font-size: rem(20px);
-          font-weight: 500;
-          font-style: normal;
-          text-align: left;
-          margin-bottom: rem(15px);
-          line-height: 1.42;
-          color: $black;
-          margin-bottom: rem(50px);
-
-          @include tablets {
-            text-align: center;
+            & * {
+              flex: 1 1 auto;
+            }
           }
-        }
-        
-        .about-burgers__pay {
-          @include flex;
-          align-items: center;
-
-          @include tablets {
-            justify-content: center;
+  
+          @include phones {
+            width: 100%;
+            flex-direction: row;
+            justify-content: flex-start;
+  
+            & * {
+              flex: 1 1 auto;
+            }
           }
-          & .pay-price {
-            font-size: rem(72px);
+  
+          .composition__link {
+            background-color: $orange2;
+            @include equal(rem(90px));
+            border-radius: rem(5px);
+            @include flex;
+            flex-direction: column;
+            align-items: center;
+            padding: rem(14px) rem(20px);
+            transition: 0.2s;
+            &:hover {
+              background-color: $red;
+            }
+            &:hover+.composition__list {
+              left: rem(90px);
+              top: 0px;
+              opacity: 1;
+            }
+            & .link-text {
+              font-family: "Gagalin";
+              color: $white;
+              text-transform: uppercase;
+              text-decoration: none;
+            }
+          }
+          
+          .composition__list {
+            position: absolute;
+            left: rem(-9999px);
+            opacity: 0;
+            font-size: 0;
+            width: rem(280px);
+            background-color: $grey;
+            border-radius: rem(5px);
+            padding: rem(20px);
+            // transition: left 0s;
+            transition: opacity 1s;
+            &:hover {
+              left: rem(90px);
+              top: 0rem;
+              opacity: 1;
+            }
+        
+            .composition__item {
+              margin-bottom: rem(15px);
+              @include flex;
+              flex-wrap: nowrap;
+              &:last-child {
+                margin-bottom: 0;
+              }
+    
+              @each $items-acc in beef,
+              buns,
+              salad,
+              sauce,
+              cucumber,
+              cheese {
+                .item__text_#{$items-acc}::before {
+                  content: '';
+                  @include flex;
+                  @include equal(rem(45px));
+                  background: url("../img/icons/#{$items-acc}.svg") center center no-repeat;
+                  background-size: contain;
+                  vertical-align: middle;
+                  margin-right: rem(20px);
+                }
+              }
+    
+              & .item__text {
+                width: 70%;
+                font-family: "Ubuntu";
+                font-weight: 700;
+                font-size: rem(14px);
+                margin: 0;
+                @include flex;
+                font-size: rem(14px);
+                margin: 0;
+              }
+              & .item__text2 {
+                width: 30%;
+                text-align: right;
+                font-size: rem(14px);
+                margin: 0;
+                @include flex;
+                font-size: rem(14px);
+                margin: 0;
+              }
+            }
+          }
+    
+          .burgers__image {
+            @include phones {
+              width: 80%;
+              height: 100%;
+              padding-top: 28%;
+              margin-left: -15%;
+              margin-right: -15%;
+            }
+          }
+
+          .burgers__ccal {
             font-family: "Gagalin";
-            color: $red;
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: 700;
-            margin-right: rem(20px);
-            @include inline-flex;
+            color: $grey;
+  
+            @include tablets {
+              width: 100%;
+              height: auto;
+            }
+  
+            @include phones {
+              width: 100%;
+              height: auto;
+            }
+            & .ccal-val {
+              background: url("../img/icons/kkal.svg") center center no-repeat;
+              background-size: contain;
+              @include equal(rem(60px));
+              color: $white;
+              opacity: 0.5;
+              text-align: center;
+              padding-top: rem(30px);
+              margin: 0;
+            }
+            & .ccal-text {
+              margin-top: rem(7px);
+              margin-bottom: 0;
+              text-align: center;
+              width: rem(60px);
+            }
           }
-          & .pay-btn {
-            @include btn;
-            @include inline-flex;
+        }
+        &__right {
+          @include flex;
+          flex-direction: column;
+          width: 50%;
+          padding-top: rem(70px);
+          padding-left: rem(40px);
+  
+          @include desktop {
+            padding-top: 5%;
+          }
+    
+          @include tablets {
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            padding-top: 5%;
+            padding-left: 0;
+          }
+  
+          @include phones {
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            padding-top: 0;
+            padding-left: 10%;
+          }
+  
+          .burger-title {
+            @include title;
+            font-size: rem(48px);
+            line-height: 1.42;
+            color: $white;
+            margin-bottom: rem(30px);
+
+            @include phones {
+              margin-bottom: 0;
+              font-size: rem(24px);
+            }
+          }
+          
+          .about-burgers__text {
+            font-family: 'Ubuntu';
+            font-size: rem(20px);
+            font-weight: 500;
+            font-style: normal;
+            text-align: left;
+            line-height: 1.42;
+            color: $black;
+            margin-bottom: rem(50px);
+  
+            @include tablets {
+              text-align: center;
+            }
+            
+            @include phones {
+              text-align: center;
+              font-size: rem(12px);
+              margin-bottom: 0;
+            }
+          }
+          
+          .about-burgers__pay {
+            @include flex;
+            align-items: center;
+  
+            @include tablets {
+              justify-content: center;
+            }
+  
+            @include phones {
+              justify-content: center;
+            }
+            & .pay-price {
+              font-size: rem(72px);
+              font-family: "Gagalin";
+              color: $red;
+              text-align: center;
+              text-transform: uppercase;
+              font-weight: 700;
+              margin-right: rem(20px);
+              @include inline-flex;
+            }
+            & .pay-btn {
+              @include btn;
+              @include inline-flex;
+            }
           }
         }
       }
     }
+
+    
   }
   
   .arrow-block {
     &-left {
       position: absolute;
       top: 50%;
-      left: 0;
+      left: 15%;
+
+      @include tablets {
+        left: 10%;
+      }
+
+      @include phones {
+        left: 3%;
+      }
     }
     &-right {
       position: absolute;
       top: 50%;
-      right: 0;
+      right: 15%;
+
+      @include tablets {
+        right: 10%;
+      }
+
+      @include phones {
+        right: 8%;
+      }
     }
   }
   
