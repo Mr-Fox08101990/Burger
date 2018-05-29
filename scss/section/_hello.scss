@@ -199,11 +199,12 @@
         &__pic2 {
           position: absolute;
           padding-top: rem(60px);
-          opacity: 0;
-          &:hover {
-            opacity: 1;
-            transition: opacity 1s;
-          }
+          // opacity: 0;
+          display: none;
+          // &:hover {
+          //   opacity: 1;
+          //   transition: opacity 1s;
+          // }
           @include tablets {
             width: auto;
             height: 60%;

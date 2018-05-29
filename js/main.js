@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+  $(window).ready(function(){
+    /* немного другой эффект появления, и задержка в 2 секунды */
+    setTimeout ("$('.page-image__pic2').show( );",2000);
+  });
+
   $('#nav-toggle').click(function () {
     $(this).toggleClass('active');
   });
