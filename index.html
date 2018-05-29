@@ -25,6 +25,8 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -64,6 +66,9 @@
               <div class="pay-btn">
                 <a href="#order" class="pay-btn__link">Заказать</a>
               </div>
+              <a id="nav-toggle" href="#">
+                <span></span>
+              </a>
             </div>
           </header>
           <div class="header__content">
@@ -83,7 +88,7 @@
             <a href="#best" class="arrow-scroll__link">
               <img src="/img/icons/arrow-scroll.svg" alt="" class="arrow-scroll__image">
             </a>
-          </div>          
+          </div>
         </div>
       </section>
       <section class="section best" id="best">
@@ -204,83 +209,83 @@
         </div>
       </section>
       <section class="section team" id="team">
-         <div class="team-block">
-            <h1 class="title team-title">КОМАНДА</h1>
-            <ul class="accordion-team-list">
-              <li class="accordion-team-item">
-                <a href="#" class="accordion-team-title-link">
-                  <div class="accordion-link-title">РИЧАРД ДЖЕЙМС</div>
-                </a>
-                <div class="accordion-team-dropdown">
-                  <div class="accordion-team-left">
-                    <img src="/img/teampic2.png" alt="" class="accordion-team-pic">
-                  </div>
-                  <div class="accordion-team-about">
-                    <h2 class="accordion-team-subtitle">Оператор</h2>
-                    <p class="accordion-team-text">
-                      С радостью поможет подобрать
-                      <br>идеальный бургер и оформить
-                      <br>заказ.
-                    </p>
-                  </div>
+        <div class="team-block">
+          <h1 class="title team-title">КОМАНДА</h1>
+          <ul class="accordion-team-list">
+            <li class="accordion-team-item">
+              <a href="#" class="accordion-team-title-link">
+                <div class="accordion-link-title">РИЧАРД ДЖЕЙМС</div>
+              </a>
+              <div class="accordion-team-dropdown">
+                <div class="accordion-team-left">
+                  <img src="/img/teampic2.png" alt="" class="accordion-team-pic">
                 </div>
-              </li>
-              <li class="accordion-team-item accordion-team-item__active">
-                <a href="#" class="accordion-team-title-link">
-                  <div class="accordion-link-title">ДЕНИЕЛ РЕДКЛИФ</div>
-                </a>
-                <div class="accordion-team-dropdown">
-                  <div class="accordion-team-left">
-                    <img src="/img/teampic2.png" alt="" class="accordion-team-pic">
-                  </div>
-                  <div class="accordion-team-about">
-                    <h2 class="accordion-team-subtitle">Оператор</h2>
-                    <p class="accordion-team-text">
-                      С радостью поможет подобрать
-                      <br>идеальный бургер и оформить
-                      <br>заказ.
-                    </p>
-                  </div>
+                <div class="accordion-team-about">
+                  <h2 class="accordion-team-subtitle">Оператор</h2>
+                  <p class="accordion-team-text">
+                    С радостью поможет подобрать
+                    <br>идеальный бургер и оформить
+                    <br>заказ.
+                  </p>
                 </div>
-              </li>
-              <li class="accordion-team-item">
-                <a href="#" class="accordion-team-title-link">
-                  <div class="accordion-link-title">ДЖЕЙК ФИНН</div>
-                </a>
-                <div class="accordion-team-dropdown">
-                  <div class="accordion-team-left">
-                    <img src="/img/teampic2.png" alt="" class="accordion-team-pic">
-                  </div>
-                  <div class="accordion-team-about">
-                    <h2 class="accordion-team-subtitle">Оператор</h2>
-                    <p class="accordion-team-text">
-                      С радостью поможет подобрать
-                      <br>идеальный бургер и оформить
-                      <br>заказ.
-                    </p>
-                  </div>
+              </div>
+            </li>
+            <li class="accordion-team-item">
+              <a href="#" class="accordion-team-title-link">
+                <div class="accordion-link-title">ДЕНИЕЛ РЕДКЛИФ</div>
+              </a>
+              <div class="accordion-team-dropdown">
+                <div class="accordion-team-left">
+                  <img src="/img/teampic2.png" alt="" class="accordion-team-pic">
                 </div>
-              </li>
-              <li class="accordion-team-item">
-                <a href="#" class="accordion-team-title-link">
-                  <div class="accordion-link-title">НИКОЛАЙ ИВАНОВ</div>
-                </a>
-                <div class="accordion-team-dropdown">
-                  <div class="accordion-team-left">
-                    <img src="/img/teampic2.png" alt="" class="accordion-team-pic">
-                  </div>
-                  <div class="accordion-team-about">
-                    <h2 class="accordion-team-subtitle">Оператор</h2>
-                    <p class="accordion-team-text">
-                      С радостью поможет подобрать
-                      <br>идеальный бургер и оформить
-                      <br>заказ.
-                    </p>
-                  </div>
+                <div class="accordion-team-about">
+                  <h2 class="accordion-team-subtitle">Оператор</h2>
+                  <p class="accordion-team-text">
+                    С радостью поможет подобрать
+                    <br>идеальный бургер и оформить
+                    <br>заказ.
+                  </p>
                 </div>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+            <li class="accordion-team-item">
+              <a href="#" class="accordion-team-title-link">
+                <div class="accordion-link-title">ДЖЕЙК ФИНН</div>
+              </a>
+              <div class="accordion-team-dropdown">
+                <div class="accordion-team-left">
+                  <img src="/img/teampic2.png" alt="" class="accordion-team-pic">
+                </div>
+                <div class="accordion-team-about">
+                  <h2 class="accordion-team-subtitle">Оператор</h2>
+                  <p class="accordion-team-text">
+                    С радостью поможет подобрать
+                    <br>идеальный бургер и оформить
+                    <br>заказ.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="accordion-team-item">
+              <a href="#" class="accordion-team-title-link">
+                <div class="accordion-link-title">НИКОЛАЙ ИВАНОВ</div>
+              </a>
+              <div class="accordion-team-dropdown">
+                <div class="accordion-team-left">
+                  <img src="/img/teampic2.png" alt="" class="accordion-team-pic">
+                </div>
+                <div class="accordion-team-about">
+                  <h2 class="accordion-team-subtitle">Оператор</h2>
+                  <p class="accordion-team-text">
+                    С радостью поможет подобрать
+                    <br>идеальный бургер и оформить
+                    <br>заказ.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="section menu" id="menu">
         <div class="menu__block">
@@ -296,8 +301,8 @@
                   Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
                   однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
                   выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                  конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал
-                  особенно чутко относиться к слову.
+                  конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+                  стал особенно чутко относиться к слову.
                 </div>
               </div>
             </li>
@@ -305,14 +310,14 @@
               <a class="menu-acco__trigger" href="#" style="background: url('../img/menu/pic3.png') right center no-repeat; background-size: cover;">
                 <div class="menu-acco__trigger-text">Вегетарианское</div>
               </a>
-              <div class="menu-acco__content visuallyhidden">
+              <div class="menu-acco__content">
                 <div class="menu-acco__text">
                   Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
                   Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
                   однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
                   выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                  конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал
-                  особенно чутко относиться к слову.
+                  конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+                  стал особенно чутко относиться к слову.
                 </div>
               </div>
             </li>
@@ -320,14 +325,14 @@
               <a class="menu-acco__trigger" href="#" style="background: url('../img/menu/pic4.png') right center no-repeat; background-size: cover;">
                 <div class="menu-acco__trigger-text">Диетическое</div>
               </a>
-              <div class="menu-acco__content visuallyhidden">
+              <div class="menu-acco__content">
                 <div class="menu-acco__text">
-                    Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
-                    Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
-                    однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
-                    выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
-                    конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал
-                    особенно чутко относиться к слову.
+                  Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+                  Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+                  однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
+                  выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                  конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+                  стал особенно чутко относиться к слову.
                 </div>
               </div>
             </li>
@@ -474,7 +479,7 @@
                 </label>
                 <label for="phone" class="form__contacts">
                   <div class="form__text">Телефон</div>
-                  <input type="text" name="phone" class="form__text-input" placeholder="+7 (812) 377-13-77">
+                  <input type="text" name="phone" class="form__text-input"  id="phone_mask" placeholder="+7 (812) 377-13-77">
                 </label>
               </div>
               <div class="two-contacts-block">
