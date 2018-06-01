@@ -18,6 +18,14 @@
   .best-page {
     width: 100%;
     min-height: rem(650px);
+
+    @include tablets {
+      padding: 0 4%;
+    }
+    
+    @include phones {
+      padding: 0 4%;
+    }
   }
   
   .best-title {

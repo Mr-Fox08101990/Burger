@@ -3,6 +3,7 @@
   background-size: cover;
   width: 100%;
   position: relative;
+
   .header {
     padding-top: rem(10px);
     margin-bottom: 15%;
@@ -24,11 +25,17 @@
       flex-wrap: nowrap;
       align-content: center;
       align-items: center;
+      padding: 0 2%;
     }
     .logo {
       @include flex;
       margin-right: auto;
+
+      @include tablets {
+        z-index: 1001;
+      }
     }
+
     .nav {
       @include flex;
       flex-wrap: nowrap;
@@ -36,22 +43,71 @@
       margin-right: rem(15px);
       @include tablets {
         display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(39, 39, 62, 0.7);
+        z-index: 1000;
+        justify-content: center;
+
+        &.active {
+          @include flex;
+        }
       }
       @include phones {
         display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(39, 39, 62, 0.7);
+        z-index: 1000;
+        justify-content: center;
       }
       & .nav__list {
         @include flex;
         align-items: center;
+        
+        @include tablets {
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        @include phones {
+          flex-direction: column;
+          justify-content: center;
+        }
+
         & .nav__item {
           @include inline-flex;
           align-items: center;
+
+          @include tablets {
+            margin-top: 24%;
+            flex-direction: column;
+          }
+
+          @include phones {
+            margin-top: 24%;
+            flex-direction: column;
+          }
+
           &::before {
             @include circle(rem(8px), $white);
             content: '';
             @include inline-flex;
             margin-right: rem(10px);
             margin-left: rem(10px);
+
+            @include tablets {
+              margin-bottom: 24%;
+            }
+            @include phones {
+              margin-bottom: 24%;
+            }
           }
           &:first-child::before {
             display: none;
@@ -75,6 +131,7 @@
       @include btn;
       @include inline-flex;
     }
+    
     #nav-toggle {
       position: relative;
       display: inline-block;
@@ -82,51 +139,74 @@
       height: 25px;
       margin-top: 0.9375rem;
       margin-left: 2%;
-    }
-    #nav-toggle span {
-      position: absolute;
-      left: 0;
-      top: 10px;
-    }
-    #nav-toggle span,
-    #nav-toggle span:before,
-    #nav-toggle span:after {
-      position: absolute;
-      display: block;
-      content: '';
-      height: 5px;
-      width: 35px;
-      background: white;
-      border-radius: 1px;
-      cursor: pointer;
-    }
-    #nav-toggle span:before {
-      top: -10px;
-    }
-    #nav-toggle span:after {
-      bottom: -10px;
-    }
-    /* Добавим анимацию всех свойств для блоков нашей иконки */
-    #nav-toggle span,
-    #nav-toggle span:before,
-    #nav-toggle span:after {
-      transition: all 500ms ease-in-out;
-    }
-    /* Центральный блок делаем прозрачным */
-    #nav-toggle.active span {
-      background-color: transparent;
-    }
-    /* Смещаем псевдо-элементы в центр иконки (на место основного блока) */
-    #nav-toggle.active span:before,
-    #nav-toggle.active span:after {
-      top: 0;
-    }
-    /* Наклоняем псевдо-элементы под углом 45 градусов, но в разные стороны */
-    #nav-toggle.active span:before {
-      transform: rotate(45deg);
-    }
-    #nav-toggle.active span:after {
-      transform: rotate(-45deg);
+      display: none;
+
+      @include tablets {
+        display: inline-block;
+        z-index: 1001;
+      }
+      
+      @include phones {
+        display: inline-block;
+        z-index: 1001;
+      }
+
+      &.active span {
+        background-color: transparent;
+
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+          background: $red;
+        }
+
+        &::after {
+          top: 0;
+          transform: rotate(-45deg);
+          background: $red;
+        }
+      }
+
+      & span {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        position: absolute;
+        display: block;
+        content: '';
+        height: 5px;
+        width: 35px;
+        background: $white;
+        border-radius: 1px;
+        cursor: pointer;
+        transition: all 500ms ease-in-out;
+
+        &::before {
+          position: absolute;
+          display: block;
+          content: '';
+          height: 5px;
+          width: 35px;
+          background: $white;
+          border-radius: 1px;
+          cursor: pointer;
+          top: -10px;
+          transition: all 500ms ease-in-out;
+        }
+
+        &::after {
+          position: absolute;
+          display: block;
+          content: '';
+          height: 5px;
+          width: 35px;
+          background: $white;
+          border-radius: 1px;
+          cursor: pointer;
+          bottom: -10px;
+          transition: all 500ms ease-in-out;
+        }
+      }
     }
   }
   .header__content {
@@ -136,12 +216,15 @@
     flex: 1;
     align-items: center;
     align-content: center;
+    
     @include tablets {
       margin-bottom: 8%;
     }
+    
     @include phones {
       margin-bottom: 30%;
     }
+
     & .content__container {
       @include flex;
       flex: 1;
@@ -163,9 +246,7 @@
         width: 50%;
         height: 100%;
         margin-right: rem(40px);
-        @include desktop {
-          margin-right: 0;
-        }
+        
         @include laptop {
           margin-right: 0;
         }
@@ -267,9 +348,11 @@
     margin-bottom: rem(50px);
     @include tablets {
       margin-bottom: rem(20px);
+      z-index: 1001;
     }
     @include phones {
       margin-bottom: 20%;
+      z-index: 1001;
     }
   }
 }

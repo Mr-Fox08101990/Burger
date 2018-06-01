@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -26,7 +26,9 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+  
 </head>
 
 <body>
@@ -352,7 +354,7 @@
                     мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </p>
                   <div class="pay-btn">
-                    <a href="#" class="pay-btn__link review-btn">ПОДРОБНЕЕ</a>
+                    <a href="#" class="pay-btn__link review-btn" id="revopenOverlay">ПОДРОБНЕЕ</a>
                   </div>
                 </div>
               </div>
@@ -367,7 +369,7 @@
                     мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </p>
                   <div class="pay-btn">
-                    <a href="#" class="pay-btn__link review-btn">ПОДРОБНЕЕ</a>
+                    <a href="#" class="pay-btn__link review-btn" id="revopenOverlay">ПОДРОБНЕЕ</a>
                   </div>
                 </div>
               </div>
@@ -382,7 +384,7 @@
                     мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </p>
                   <div class="pay-btn">
-                    <a href="#" class="pay-btn__link review-btn">ПОДРОБНЕЕ</a>
+                    <a href="#" class="pay-btn__link review-btn" id="revopenOverlay">ПОДРОБНЕЕ</a>
                   </div>
                 </div>
               </div>
@@ -397,7 +399,7 @@
                     мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </p>
                   <div class="pay-btn">
-                    <a href="#" class="pay-btn__link review-btn">ПОДРОБНЕЕ</a>
+                    <a href="#" class="pay-btn__link review-btn" id="revopenOverlay">ПОДРОБНЕЕ</a>
                   </div>
                 </div>
               </div>
@@ -412,7 +414,7 @@
                     мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </p>
                   <div class="pay-btn">
-                    <a href="#" class="pay-btn__link review-btn">ПОДРОБНЕЕ</a>
+                    <a href="#" class="pay-btn__link review-btn" id="revopenOverlay">ПОДРОБНЕЕ</a>
                   </div>
                 </div>
               </div>
@@ -427,7 +429,7 @@
                     мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </p>
                   <div class="pay-btn">
-                    <a href="#" class="pay-btn__link review-btn">ПОДРОБНЕЕ</a>
+                    <a href="#" class="pay-btn__link review-btn" id="revopenOverlay">ПОДРОБНЕЕ</a>
                   </div>
                 </div>
               </div>
@@ -442,7 +444,7 @@
                     мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </p>
                   <div class="pay-btn">
-                    <a href="#" class="pay-btn__link review-btn">ПОДРОБНЕЕ</a>
+                    <a href="#" class="pay-btn__link review-btn" id="revopenOverlay">ПОДРОБНЕЕ</a>
                   </div>
                 </div>
               </div>
@@ -457,7 +459,7 @@
                     мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </p>
                   <div class="pay-btn">
-                    <a href="#" class="pay-btn__link review-btn">ПОДРОБНЕЕ</a>
+                    <a href="#" class="pay-btn__link review-btn" id="revopenOverlay">ПОДРОБНЕЕ</a>
                   </div>
                 </div>
               </div>
@@ -551,7 +553,7 @@
       </section>
       <section class="section map" id="map">
         <div class="map-block">
-          <iframe class="map-image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2001.1639687035145!2d30.42208421639283!3d59.89622798186078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962fccc4c0512b%3A0xad34528f97d3c3e8!2z0YPQuy4g0JHQsNCx0YPRiNC60LjQvdCwLCAxMiwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MjAyOQ!5e0!3m2!1sru!2sru!4v1524668013178"></iframe>
+          <div id="ya-map" class="map-image"></div>
         </div>
         <footer class="footer">
           <div class="container footer__container">

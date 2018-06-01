@@ -7,9 +7,33 @@
   & .map-block {
     width: 100%;
     height: 93%;
-    & .map-image {
-      @include equal(100%);
+    .map-image {
+      height: 100%;
+      width: 100%;
     }
+       
+    .map__hint {
+      padding: rem(20px);
+      min-height: rem(55px);
+      min-width: rem(195px);
+      font-size: rem(20px);
+      line-height: 1;
+      color: $white;
+      background-color: $orange;
+      background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+      border-radius: rem(20px);
+    }
+    
+    .map__balloon {
+    padding: rem(20px);
+    font-size: rem(30px);
+    line-height: 1;
+    color:  $white;
+    background-color: $orange;
+    background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+    border-radius: rem(20px);
+    }
+    
   }
 
   .footer {
@@ -111,7 +135,7 @@
         flex-wrap: nowrap;
 
         @include phones {
-          padding-left: rem(40px);
+          padding-left: rem(20px);
         }
 
         & .social-item {

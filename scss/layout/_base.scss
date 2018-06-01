@@ -45,15 +45,14 @@ body {
 
 .container {
   margin: 0 auto;
-  // @include equal(100%);
+  @include equal(100%);
   max-width: rem(940px);
   // min-width: rem(940px);
-  width: 95%;
-  height: 100%;
-  // padding-left: rem(73px);
+  // width: 95%;
   position: relative;
   display: flex;
   flex-direction: column;
+
 }
 
 *,
