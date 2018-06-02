@@ -22,13 +22,20 @@
     height: 100%;
     margin-right: 5%;
     margin-left: 5%;
+    position: relative; 
+    overflow: hidden; 
 
     .burgers__item {
       @include equal (100%);
       padding-top: 10%;
-
-      @include phones {
-
+      position: absolute; 
+      transition: all 1s ease-in 0.1s; 
+      left:0;
+      .no_active {
+        color: $red;
+      }
+      .next {
+        right: 0;
       }
 
       .about-burgers {

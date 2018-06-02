@@ -1,0 +1,101 @@
+//----- Popoup
+.popup-wrap-review {
+  width:100%;
+  height:100%;
+  display:none;
+  position:absolute;
+  top:rem(0px);
+  left:rem(0px);
+  content:'';
+  background:$black;
+
+  &.active {
+    @include flex;
+  }
+  .popup-box {
+    padding:rem(70px);
+    transform:translate(-50%, -50%) scale(0.5);
+    position:absolute;
+    top:50%;
+    left:50%;
+    box-shadow:rem(0px) rem(2px) rem(16px) rgba(0,0,0,0.5);
+    border-radius:rem(3px);
+    background:$white;
+    text-align:center;
+    .popup-title {
+      font-size: rem(14px);
+      font-family: "Gagalin";
+      color: $black;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 0 auto;
+      margin-bottom: rem(35px);
+    }
+    .popup-subtitle {
+      font-family: 'Ubuntu';
+      font-size: rem(14px);
+      font-weight: 300;
+      font-style: normal;
+      text-align: left;
+    }
+    .close-btn {
+      width:rem(35px);
+      height:rem(35px);
+      @include inline-flex;
+      justify-content: center;
+      align-items: center;
+      position:absolute;
+      top:rem(10px);
+      right:rem(10px);
+      border-radius:rem(1000px);
+      background: $red;
+      text-decoration:none;
+      color: $white;
+    }
+  }  
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+
+  .container {
+    position: relative;
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      width: rem(250px);
+      background: $grey;
+      border-radius: rem(5px);
+      padding: rem(10px);
+      color: $white;
+      margin: 0;
+    }
+    
+    .close {
+      color: $white;
+      position: absolute;
+      right: 31%;
+      top: 49%;
+      background: $red;
+      border-radius: 50%;
+      width: rem(20px);
+      height: rem(20px);
+      line-height: rem(20px);
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+}
+

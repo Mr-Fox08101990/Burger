@@ -8,46 +8,7 @@ $dark:#1f2122;
 $black:rgba(0, 0, 0, 0.7);
 $grey:rgba(255, 255, 255, 0.5);
 
-//выпадашка на отзывах
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: $dark;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10000;
 
-    .overlay-container {
-        position: relative;
-    
-        .overlay-content {
-            width: rem(400px);
-            background: $black;
-            border-radius: rem(5px);
-            padding: rem(10px);
-            color: $white;
-            margin: 0;
-        }
-            
-        .close {
-            color: $white;
-            position: absolute;
-            right: rem(-5px);
-            top: rem(-10px);
-            background: $red;
-            border-radius: 50%;
-            width: rem(20px);
-            height: rem(20px);
-            line-height: rem(20px);
-            text-align: center;
-            text-decoration: none;
-        }
-    }
-}
 
 
   
