@@ -13,7 +13,7 @@
   }
 
   @include phones {
-    padding: rem(50px) rem(20px);
+    padding: rem(10px) rem(20px);
   }
 
   .burgers__list {
@@ -55,7 +55,7 @@
         @include phones {
           flex-direction: column;
           height: auto;
-          padding-top: 10%;
+          // padding-top: 10%;
         }
   
         // @each $images-acc in dark,

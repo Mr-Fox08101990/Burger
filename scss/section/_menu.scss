@@ -97,6 +97,10 @@
           @include desktop {
             top: 93%;
           }
+
+          @include phones {
+            top: 93%;
+          }
         }
       }
   

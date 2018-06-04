@@ -29,6 +29,7 @@ $(document).ready(function () {
     reviewPopup.style.display="none";
   }) 
   //popup-form
+
   const openButton = document.querySelector(".openOverlay");
   const template = document.querySelector("#overlayTemplate").innerHTML;
   const overlay = createOverlay(template);
@@ -183,8 +184,6 @@ $(document).ready(function () {
     // old++;
   }
 
-
-
   // // Карта
   ymaps.ready(init);
 
@@ -241,7 +240,7 @@ $(document).ready(function () {
       },
       {
         iconLayout: 'default#image',
-        iconImageHref: './img/map-marker.png',
+        iconImageHref: '../img/map-marker.png',
         iconImageSize: [46, 57],
         iconImageOffset: [-23, -57],
       });

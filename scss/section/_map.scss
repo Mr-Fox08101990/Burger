@@ -4,15 +4,15 @@
   margin: 0 auto;
   min-height: auto;
   position: relative;
-  & .map-block {
+  .map-block {
     width: 100%;
     height: 93%;
-    & .map-image {
+    .map-image {
       height: 100%;
       width: 100%;
     }
        
-    & .map__hint {
+    .map__hint {
       padding: rem(20px);
       min-height: rem(55px);
       min-width: rem(195px);
@@ -24,7 +24,7 @@
       border-radius: rem(20px);
     }
     
-    &.map__balloon {
+    & .map__balloon {
       padding: rem(20px);
       font-size: rem(30px);
       line-height: 1;

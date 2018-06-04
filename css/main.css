@@ -220,7 +220,12 @@ a {
           z-index: 1000;
           -webkit-box-pack: center;
           -ms-flex-pack: center;
-          justify-content: center; } }
+          justify-content: center; }
+          .hello .header .nav.active {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            display: -webkit-flex; } }
       .hello .header .nav .nav__list {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -603,7 +608,7 @@ a {
     @media screen and (max-width: 480px) {
       .best .best-title {
         font-size: 3rem;
-        margin-bottom: 5%; } }
+        margin-bottom: 0; } }
   .best .about__list {
     width: 100%;
     margin-bottom: 0;
@@ -708,7 +713,7 @@ a {
       padding: 6.25rem 1.875rem; } }
   @media screen and (max-width: 480px) {
     .burgers {
-      padding: 3.125rem 1.25rem; } }
+      padding: 0.625rem 1.25rem; } }
   .burgers .burgers__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -756,8 +761,7 @@ a {
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
             flex-direction: column;
-            height: auto;
-            padding-top: 10%; } }
+            height: auto; } }
         .burgers .burgers__list .burgers__item .about-burgers__left {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -1434,6 +1438,9 @@ a {
             @media screen and (min-width: 993px) and (max-width: 1366px) {
               .menu .menu__block .menu-acco .menu-acco__item .menu-acco__trigger-text {
                 top: 93%; } }
+            @media screen and (max-width: 480px) {
+              .menu .menu__block .menu-acco .menu-acco__item .menu-acco__trigger-text {
+                top: 93%; } }
         .menu .menu__block .menu-acco .menu-acco__item .menu-acco__content {
           height: 100%;
           background: rgba(47, 50, 52, 0.93);
@@ -1517,7 +1524,7 @@ a {
         @media screen and (max-width: 480px) {
           .reviews-general .reviews-list .reviews-item {
             width: 50%;
-            height: 25%;
+            height: 23%;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
@@ -1644,7 +1651,8 @@ a {
   background: url(/img/orderbg.png) center center no-repeat;
   background-size: cover;
   padding-top: 6.25rem;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
   @media screen and (min-width: 993px) and (max-width: 1366px) {
     .order {
       padding-top: 0; } }
@@ -1674,7 +1682,7 @@ a {
         margin-top: 20%; } }
     @media screen and (max-width: 480px) {
       .order .order__container {
-        margin-top: 10%; } }
+        margin-top: 0%; } }
   .order .form-title {
     font-size: 3rem;
     text-align: center;
@@ -1869,6 +1877,9 @@ a {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column; }
+        @media screen and (max-width: 480px) {
+          .order .form__right .form__area {
+            margin-bottom: 0.3125rem; } }
         .order .form__right .form__area .form__area-label {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -1900,7 +1911,10 @@ a {
               .order .form__right .form__area .form__area-label .form__area-text {
                 height: 5.625rem; } }
       .order .form__right .form__controls {
-        margin-bottom: 0.3125rem; }
+        margin-bottom: 4%; }
+        @media screen and (max-width: 480px) {
+          .order .form__right .form__controls {
+            margin-bottom: 0%; } }
         .order .form__right .form__controls .one-controls-block {
           margin-bottom: 0.625rem;
           display: -webkit-box;
@@ -2060,7 +2074,7 @@ a {
       background-image: -o-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
       background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
       border-radius: 1.25rem; }
-    .map .map-block.map__balloon {
+    .map .map-block .map__balloon {
       padding: 1.25rem;
       font-size: 1.875rem;
       line-height: 1;
@@ -2305,24 +2319,38 @@ a {
     left: 50%;
     -webkit-box-shadow: 0rem 0.125rem 1rem rgba(0, 0, 0, 0.5);
     box-shadow: 0rem 0.125rem 1rem rgba(0, 0, 0, 0.5);
-    border-radius: 0.1875rem;
+    border-radius: 2.1875rem;
     background: #fff;
     text-align: center; }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+      .popup-wrap-review .popup-box {
+        width: 100%;
+        height: 35%; } }
+    @media screen and (max-width: 480px) {
+      .popup-wrap-review .popup-box {
+        width: 100%;
+        height: 60%; } }
     .popup-wrap-review .popup-box .popup-title {
-      font-size: 0.875rem;
+      font-size: 3rem;
       font-family: "Gagalin";
       color: rgba(0, 0, 0, 0.7);
       text-align: center;
       text-transform: uppercase;
       font-weight: 700;
       margin: 0 auto;
-      margin-bottom: 2.1875rem; }
+      margin-bottom: 2.5rem; }
+      @media screen and (max-width: 480px) {
+        .popup-wrap-review .popup-box .popup-title {
+          font-size: 1.5rem; } }
     .popup-wrap-review .popup-box .popup-subtitle {
       font-family: 'Ubuntu';
-      font-size: 0.875rem;
+      font-size: 1.5rem;
       font-weight: 300;
       font-style: normal;
       text-align: left; }
+      @media screen and (max-width: 480px) {
+        .popup-wrap-review .popup-box .popup-subtitle {
+          font-size: 0.75rem; } }
     .popup-wrap-review .popup-box .close-btn {
       width: 2.1875rem;
       height: 2.1875rem;
@@ -2368,11 +2396,19 @@ a {
       top: 50%;
       left: 40%;
       width: 15.625rem;
-      background: rgba(255, 255, 255, 0.5);
+      background: #fff;
       border-radius: 0.3125rem;
       padding: 0.625rem;
-      color: #fff;
+      color: rgba(0, 0, 0, 0.7);
       margin: 0; }
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        .overlay .container .content {
+          top: 42%;
+          left: 36%; } }
+      @media screen and (max-width: 480px) {
+        .overlay .container .content {
+          top: 42%;
+          left: 16%; } }
     .overlay .container .close {
       color: #fff;
       position: absolute;
@@ -2385,5 +2421,13 @@ a {
       line-height: 1.25rem;
       text-align: center;
       text-decoration: none; }
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        .overlay .container .close {
+          right: 33%;
+          top: 41%; } }
+      @media screen and (max-width: 480px) {
+        .overlay .container .close {
+          right: 15%;
+          top: 40%; } }
 
 /*# sourceMappingURL=main.css.map */

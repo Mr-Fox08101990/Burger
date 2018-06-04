@@ -66,6 +66,10 @@
         background-color: rgba(39, 39, 62, 0.7);
         z-index: 1000;
         justify-content: center;
+
+        &.active {
+          @include flex;
+        }
       }
       & .nav__list {
         @include flex;
