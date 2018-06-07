@@ -1,4 +1,4 @@
-$('#order-form').on('submit', submitForm);
+$('#order-form').on('#popup-btn-form', submitForm);
 
 function submitForm (ev) {
     ev.preventDefault();
