@@ -11,6 +11,12 @@ $(document).ready(function () {
     $(".nav").toggleClass("active"); return false;
   });
   
+  // Состав бургера
+
+  $('.composition__link').on('click', e => {
+    e.preventDefault();
+  });
+
   //popups
   //popup-review
   const reviews = document.querySelector(".reviews-list");
@@ -72,41 +78,6 @@ $(document).ready(function () {
     };
   }
 
-  //OnePage Scroll
-  $(".wrapper").onepage_scroll({
-    sectionContainer: ".section", // контейнер, к которому будет применяться скролл
-    easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
-    animationTime: 1000, // время анимации
-    pagination: false, // скрыть или отобразить пагинатор
-    // updateURL: true // обновлять URL или нет
-  });
-
-  //Слайдер с бургерами
-  
-  var prev = document.querySelector('arrow-burgers-left');
-  var next = document.querySelector('arrow-burgers-right');
-  var slideIndex = 1;
-  showSlides(slideIndex);
-
-
-  // Next/previous controls
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("burgers__item");
-    if (n > slides.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-    }
-    
-    slides[slideIndex-1].style.display = "flex"; 
-  }
-
   //Аккордеон для Команды
   const teamItem = document.querySelectorAll('.accordion-team-item');
 
@@ -146,7 +117,11 @@ $(document).ready(function () {
       };
     });
   };
+
   
+
+  
+
   // Phone mask
 
   var inp = document.getElementById("phone_mask");
@@ -183,79 +158,217 @@ $(document).ready(function () {
 
     // old++;
   }
-
-  // // Карта
-  ymaps.ready(init);
-
-  var placemarks = [
-      {
-        latitude: 59.97,
-        longitude: 30.31,
-        hintContent: '<div class="map__hint">ул. Литераторов, д. 19</div>',
-        balloonContent: [
-          '<div class="map__balloon">',
-          '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
-          'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литераторов, д. 19',
-          '</div>'
-        ]
-      },
-      {
-        latitude: 59.94,
-        longitude: 30.25,
-        hintContent: '<div class="map__hint">Малый проспект В О, д 64</div>',
-        balloonContent: [
-          '<div class="map__balloon">',
-          '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
-          'Самые вкусные бургеры у нас! Заходите по адресу: Малый проспект В О, д 64',
-          '</div>'
-        ]
-      },
-      {
-        latitude: 59.93,
-        longitude: 30.34,
-        hintContent: '<div class="map__hint">наб. реки Фонтанки, д. 56</div>',
-        balloonContent: [
-          '<div class="map__balloon">',
-          '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
-          'Самые вкусные бургеры у нас! Заходите по адресу: наб. реки Фонтанки, д. 56',
-          '</div>'
-        ]
-      }
-  ],
-  geoObjects= [];
-
-  function init() {
-    var map = new ymaps.Map('map-image', {
-      center: [59.94, 30.32],
-      zoom: 12,
-      controls: ['zoomControl'],
-      behaviors: ['drag']
-    });
-
-    for (var i = 0; i < placemarks.length; i++) {
-      geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
-      {
-        hintContent: placemarks[i].hintContent,
-        balloonContent: placemarks[i].balloonContent.join('')
-      },
-      {
-        iconLayout: 'default#image',
-        iconImageHref: '../img/map-marker.png',
-        iconImageSize: [46, 57],
-        iconImageOffset: [-23, -57],
-      });
-    }
-
-    var clusterer = new ymaps.Clusterer({
-      clusterIconContentLayout: null
-    });
-
-    map.geoObjects.add(clusterer);
-    clusterer.add(geoObjects);
-  }
-  
-  
 });
 
+// // Карта
+ymaps.ready(init);
 
+var placemarks = [
+    {
+      latitude: 59.97,
+      longitude: 30.31,
+      hintContent: '<div class="map__hint">ул. Литераторов, д. 19</div>',
+      balloonContent: [
+        '<div class="map__balloon">',
+        '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+        'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литераторов, д. 19',
+        '</div>'
+      ]
+    },
+    {
+      latitude: 59.94,
+      longitude: 30.25,
+      hintContent: '<div class="map__hint">Малый проспект В О, д 64</div>',
+      balloonContent: [
+        '<div class="map__balloon">',
+        '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+        'Самые вкусные бургеры у нас! Заходите по адресу: Малый проспект В О, д 64',
+        '</div>'
+      ]
+    },
+    {
+      latitude: 59.93,
+      longitude: 30.34,
+      hintContent: '<div class="map__hint">наб. реки Фонтанки, д. 56</div>',
+      balloonContent: [
+        '<div class="map__balloon">',
+        '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+        'Самые вкусные бургеры у нас! Заходите по адресу: наб. реки Фонтанки, д. 56',
+        '</div>'
+      ]
+    }
+],
+geoObjects= [];
+
+function init() {
+  var map = new ymaps.Map('ya-map', {
+    center: [59.94, 30.32],
+    zoom: 12,
+    controls: ['zoomControl'],
+    behaviors: ['drag']
+  });
+
+  for (var i = 0; i < placemarks.length; i++) {
+    geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
+    {
+      hintContent: placemarks[i].hintContent,
+      balloonContent: placemarks[i].balloonContent.join('')
+    },
+    {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/map-marker.png',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-23, -57],
+    });
+  }
+
+  var clusterer = new ymaps.Clusterer({
+    clusterIconContentLayout: null
+  });
+
+  map.geoObjects.add(clusterer);
+  clusterer.add(geoObjects);
+};
+  
+
+//OnePage Scroll
+  // $(".wrapper").onepage_scroll({
+  //   sectionContainer: ".section", // контейнер, к которому будет применяться скролл
+  //   easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
+  //   animationTime: 1000, // время анимации
+  //   pagination: false, // скрыть или отобразить пагинатор
+  //   // updateURL: true // обновлять URL или нет
+  // });
+
+  // const sections = $(".section");
+  // const display = $(".maincontent");
+  // let inScroll = false;
+
+  // const mobileDetect = new MobileDetect(window.navigator.userAgent);
+  // const isMobile = mobileDetect.mobile();
+
+  // const performTransition = sectionEq => {
+  //   const position = `${sectionEq * -100}%`;
+  
+  //   if (inScroll) return;
+  
+  //   inScroll = true;
+  
+  //   sections
+  //     .eq(sectionEq)
+  //     .addClass("active")
+  //     .siblings()
+  //     .removeClass("active");
+  
+  //   display.css({
+  //     transform: `translate(0, ${position})`,
+  //     "-webkit-transform": `translate(0, ${position})`
+  //   });
+  
+  //   setTimeout(() => {
+  //     inScroll = false;
+  //   }, 1300); // продолжительность анимации + 300ms - потому что закончится инерция
+  // };
+
+  // const scrollToSection = direction => {
+  //   const activeSection = sections.filter(".active");
+  //   const nextSection = activeSection.next();
+  //   const prevSection = activeSection.prev();
+  
+  //   if (direction === "up" && prevSection.length) {
+  //     performTransition(prevSection.index());
+  //   }
+  
+  //   if (direction === "down" && nextSection.length) {
+  //     performTransition(nextSection.index());
+  //   }
+  // };
+
+  // $(document).on({
+  //   wheel: e => {
+  //     const deltaY = e.originalEvent.deltaY;
+  //     const direction = deltaY > 0 
+  //       ? "down" 
+  //       : "up";
+  
+  //     scrollToSection(direction);
+  //   },
+  //   keydown: e => {
+  //     switch (e.keyCode) {
+  //       case 40:
+  //         scrollToSection("down");
+  //         break;
+  
+  //       case 38:
+  //         scrollToSection("up");
+  //         break;
+  //     }
+  //   },
+  //   touchmove: e => e.preventDefault()
+  
+  //   // touchstart touchend touchmove 
+  // });
+
+  // if (isMobile) {
+  //   $(document).swipe({
+  //     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+  //       /**
+  //        * плагин возвращает фактическое...
+  //        * ...
+  //        */
+  //       const scrollDirection = direction === 'down' ? 'up' : 'down';
+        
+  //       scrollToSection(scrollDirection);
+  //     }
+  //   });
+  // }
+
+  //Слайдер с бургерами
+  
+  // $(function(){
+
+  //   var moveSlide = function (container,slideNum) {
+  //     var 
+  //       items = container.find('.burgers__item'),
+  //       activeSlide = items.filter('.active'),
+  //       regItem = items.eq(slideNum),
+  //       regIndex = reqItem.index(),
+  //       list = container.find('.burgers__list'),
+  //       duration = 500;
+      
+  //     if (reqItem.length) {
+  //       list.animate({
+  //         'left' : -reqIndex * 100 + '%'
+  //       }, duration, function(){
+  //         activeSlide.removeClass('active');
+  //         reqItem.addClass('active');
+  //       });
+  //     }   
+  //   }
+
+  //   $('.slider-btn').on('click', function(e){
+
+  //     e.preventDefault();
+      
+  //     var $this = $(this),
+  //       container = $this.closest('.burgers__container');
+  //       items = $('.burgers__item', container),
+  //       activeItem = items.filter('.active'),
+  //       existedItem, edgeItem, reqItem;
+
+  //     if ($this.hasClass('.arrow-burgers-right')) {
+  //       existedItem = activeItem.next();
+  //       edgeItem = items.first();
+  //     }
+  //     if ($this.hasClass('.arrow-burgers-left')) {
+  //       existedItem = activeItem.prev();
+  //       edgeItem = items.last();  
+
+  //     } 
+      
+  //     reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+
+  //     moveSlide(container, reqItem);
+  //   });
+  // });
 

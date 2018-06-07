@@ -29,20 +29,26 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  overflow: hidden; }
 
 .maincontent {
   width: 100%;
   height: 100%;
-  overflow-x: hidden; }
+  min-height: 40.625rem;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  will-change: transform; }
 
 .section {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
   min-height: 40.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  position: relative;
+  overflow: hidden; }
 
 .container {
   margin: 0 auto;
@@ -714,412 +720,414 @@ a {
   @media screen and (max-width: 480px) {
     .burgers {
       padding: 0.625rem 1.25rem; } }
-  .burgers .burgers__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    display: -webkit-flex;
-    width: 90%;
-    height: 100%;
-    margin-right: 5%;
-    margin-left: 5%;
+  .burgers .burgers__container {
     position: relative;
     overflow: hidden; }
-    .burgers .burgers__list .burgers__item {
+    .burgers .burgers__container .burgers__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      display: -webkit-flex;
       width: 100%;
       height: 100%;
-      padding-top: 10%;
+      margin-right: 5%;
+      margin-left: 5%;
       position: absolute;
-      -webkit-transition: all 1s ease-in 0.1s;
-      -o-transition: all 1s ease-in 0.1s;
-      transition: all 1s ease-in 0.1s;
-      left: 0; }
-      .burgers .burgers__list .burgers__item .no_active {
-        color: #e45028; }
-      .burgers .burgers__list .burgers__item .next {
-        right: 0; }
-      .burgers .burgers__list .burgers__item .about-burgers {
-        height: 40.625rem;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        display: -webkit-flex; }
-        @media screen and (min-width: 993px) and (max-width: 1366px) {
-          .burgers .burgers__list .burgers__item .about-burgers {
-            height: 31.25rem; } }
-        @media screen and (min-width: 481px) and (max-width: 768px) {
-          .burgers .burgers__list .burgers__item .about-burgers {
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            height: auto;
-            padding-top: 10%; } }
-        @media screen and (max-width: 480px) {
-          .burgers .burgers__list .burgers__item .about-burgers {
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            height: auto; } }
-        .burgers .burgers__list .burgers__item .about-burgers__left {
+      top: 0;
+      left: 0;
+      overflow: hidden; }
+      .burgers .burgers__container .burgers__list .burgers__item {
+        width: 100%;
+        height: 100%;
+        padding-top: 10%;
+        position: relative;
+        display: inline-block;
+        -webkit-transition: all 1s ease-in 0.1s;
+        -o-transition: all 1s ease-in 0.1s;
+        transition: all 1s ease-in 0.1s; }
+        .burgers .burgers__container .burgers__list .burgers__item .about-burgers {
+          height: 40.625rem;
+          position: absolute;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
-          display: -webkit-flex;
-          width: 50%;
-          position: relative;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-          justify-content: space-between; }
-          @media screen and (min-width: 481px) and (max-width: 768px) {
-            .burgers .burgers__list .burgers__item .about-burgers__left {
-              width: 100%;
-              -webkit-box-orient: horizontal;
-              -webkit-box-direction: normal;
-              -ms-flex-direction: row;
-              flex-direction: row;
-              -webkit-box-pack: start;
-              -ms-flex-pack: start;
-              justify-content: flex-start; }
-              .burgers .burgers__list .burgers__item .about-burgers__left * {
-                -webkit-box-flex: 1;
-                -ms-flex: 1 1 auto;
-                flex: 1 1 auto; } }
-          @media screen and (max-width: 480px) {
-            .burgers .burgers__list .burgers__item .about-burgers__left {
-              width: 100%;
-              -webkit-box-orient: horizontal;
-              -webkit-box-direction: normal;
-              -ms-flex-direction: row;
-              flex-direction: row;
-              -webkit-box-pack: start;
-              -ms-flex-pack: start;
-              justify-content: flex-start; }
-              .burgers .burgers__list .burgers__item .about-burgers__left * {
-                -webkit-box-flex: 1;
-                -ms-flex: 1 1 auto;
-                flex: 1 1 auto; } }
-          .burgers .burgers__list .burgers__item .about-burgers__left .composition__link {
-            background-color: #f08c33;
-            width: 5.625rem;
-            height: 5.625rem;
-            border-radius: 0.3125rem;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            display: -webkit-flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            padding: 0.875rem 1.25rem;
-            -webkit-transition: 0.2s;
-            -o-transition: 0.2s;
-            transition: 0.2s; }
-            .burgers .burgers__list .burgers__item .about-burgers__left .composition__link:hover {
-              background-color: #e45028; }
-            .burgers .burgers__list .burgers__item .about-burgers__left .composition__link:hover + .composition__list {
-              left: 5.625rem;
-              top: 0px;
-              opacity: 1; }
-            .burgers .burgers__list .burgers__item .about-burgers__left .composition__link .link-text {
-              font-family: "Gagalin";
-              color: #fff;
-              text-transform: uppercase;
-              text-decoration: none; }
-          .burgers .burgers__list .burgers__item .about-burgers__left .composition__list {
-            position: absolute;
-            left: -624.9375rem;
-            opacity: 0;
-            font-size: 0;
-            width: 17.5rem;
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 0.3125rem;
-            padding: 1.25rem;
-            -webkit-transition: opacity 1s;
-            -o-transition: opacity 1s;
-            transition: opacity 1s; }
-            .burgers .burgers__list .burgers__item .about-burgers__left .composition__list:hover {
-              left: 5.625rem;
-              top: 0rem;
-              opacity: 1; }
-            .burgers .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item {
-              margin-bottom: 0.9375rem;
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              display: -webkit-flex;
-              -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap; }
-              .burgers .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item:last-child {
-                margin-bottom: 0; }
-              .burgers .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text_beef::before {
-                content: '';
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                display: -webkit-flex;
-                width: 2.8125rem;
-                height: 2.8125rem;
-                background: url("../img/icons/beef.svg") center center no-repeat;
-                background-size: contain;
-                vertical-align: middle;
-                margin-right: 1.25rem; }
-              .burgers .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text_buns::before {
-                content: '';
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                display: -webkit-flex;
-                width: 2.8125rem;
-                height: 2.8125rem;
-                background: url("../img/icons/buns.svg") center center no-repeat;
-                background-size: contain;
-                vertical-align: middle;
-                margin-right: 1.25rem; }
-              .burgers .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text_salad::before {
-                content: '';
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                display: -webkit-flex;
-                width: 2.8125rem;
-                height: 2.8125rem;
-                background: url("../img/icons/salad.svg") center center no-repeat;
-                background-size: contain;
-                vertical-align: middle;
-                margin-right: 1.25rem; }
-              .burgers .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text_sauce::before {
-                content: '';
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                display: -webkit-flex;
-                width: 2.8125rem;
-                height: 2.8125rem;
-                background: url("../img/icons/sauce.svg") center center no-repeat;
-                background-size: contain;
-                vertical-align: middle;
-                margin-right: 1.25rem; }
-              .burgers .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text_cucumber::before {
-                content: '';
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                display: -webkit-flex;
-                width: 2.8125rem;
-                height: 2.8125rem;
-                background: url("../img/icons/cucumber.svg") center center no-repeat;
-                background-size: contain;
-                vertical-align: middle;
-                margin-right: 1.25rem; }
-              .burgers .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text_cheese::before {
-                content: '';
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                display: -webkit-flex;
-                width: 2.8125rem;
-                height: 2.8125rem;
-                background: url("../img/icons/cheese.svg") center center no-repeat;
-                background-size: contain;
-                vertical-align: middle;
-                margin-right: 1.25rem; }
-              .burgers .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text {
-                width: 70%;
-                font-family: "Ubuntu";
-                font-weight: 700;
-                font-size: 0.875rem;
-                margin: 0;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                display: -webkit-flex;
-                font-size: 0.875rem;
-                margin: 0; }
-              .burgers .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text2 {
-                width: 30%;
-                text-align: right;
-                font-size: 0.875rem;
-                margin: 0;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                display: -webkit-flex;
-                font-size: 0.875rem;
-                margin: 0; }
-          @media screen and (max-width: 480px) {
-            .burgers .burgers__list .burgers__item .about-burgers__left .burgers__image {
-              width: 80%;
-              height: 100%;
-              padding-top: 28%;
-              margin-left: -15%;
-              margin-right: -15%; } }
-          .burgers .burgers__list .burgers__item .about-burgers__left .burgers__ccal {
-            font-family: "Gagalin";
-            color: rgba(255, 255, 255, 0.5); }
-            @media screen and (min-width: 481px) and (max-width: 768px) {
-              .burgers .burgers__list .burgers__item .about-burgers__left .burgers__ccal {
-                width: 100%;
-                height: auto; } }
-            @media screen and (max-width: 480px) {
-              .burgers .burgers__list .burgers__item .about-burgers__left .burgers__ccal {
-                width: 100%;
-                height: auto; } }
-            .burgers .burgers__list .burgers__item .about-burgers__left .burgers__ccal .ccal-val {
-              background: url("../img/icons/kkal.svg") center center no-repeat;
-              background-size: contain;
-              width: 3.75rem;
-              height: 3.75rem;
-              color: #fff;
-              opacity: 0.5;
-              text-align: center;
-              padding-top: 1.875rem;
-              margin: 0; }
-            .burgers .burgers__list .burgers__item .about-burgers__left .burgers__ccal .ccal-text {
-              margin-top: 0.4375rem;
-              margin-bottom: 0;
-              text-align: center;
-              width: 3.75rem; }
-        .burgers .burgers__list .burgers__item .about-burgers__right {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          display: -webkit-flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          width: 50%;
-          padding-top: 4.375rem;
-          padding-left: 2.5rem; }
+          display: -webkit-flex; }
           @media screen and (min-width: 993px) and (max-width: 1366px) {
-            .burgers .burgers__list .burgers__item .about-burgers__right {
-              padding-top: 5%; } }
+            .burgers .burgers__container .burgers__list .burgers__item .about-burgers {
+              height: 31.25rem; } }
           @media screen and (min-width: 481px) and (max-width: 768px) {
-            .burgers .burgers__list .burgers__item .about-burgers__right {
+            .burgers .burgers__container .burgers__list .burgers__item .about-burgers {
               -webkit-box-orient: vertical;
               -webkit-box-direction: normal;
               -ms-flex-direction: column;
               flex-direction: column;
-              width: 100%;
-              text-align: center;
-              padding-top: 5%;
-              padding-left: 0; } }
-          @media screen and (max-width: 480px) {
-            .burgers .burgers__list .burgers__item .about-burgers__right {
-              -webkit-box-orient: vertical;
-              -webkit-box-direction: normal;
-              -ms-flex-direction: column;
-              flex-direction: column;
-              width: 100%;
               height: auto;
-              text-align: center;
-              padding-top: 0;
-              padding-left: 10%; } }
-          .burgers .burgers__list .burgers__item .about-burgers__right .burger-title {
-            font-size: 4.5rem;
-            font-family: "Gagalin";
-            color: #f9b43b;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 3rem;
-            line-height: 1.42;
-            color: #fff;
-            margin-bottom: 1.875rem; }
-            @media screen and (max-width: 480px) {
-              .burgers .burgers__list .burgers__item .about-burgers__right .burger-title {
-                margin-bottom: 0;
-                font-size: 1.5rem; } }
-          .burgers .burgers__list .burgers__item .about-burgers__right .about-burgers__text {
-            font-family: 'Ubuntu';
-            font-size: 1.25rem;
-            font-weight: 500;
-            font-style: normal;
-            text-align: left;
-            line-height: 1.42;
-            color: rgba(0, 0, 0, 0.7);
-            margin-bottom: 3.125rem; }
-            @media screen and (min-width: 481px) and (max-width: 768px) {
-              .burgers .burgers__list .burgers__item .about-burgers__right .about-burgers__text {
-                text-align: center; } }
-            @media screen and (max-width: 480px) {
-              .burgers .burgers__list .burgers__item .about-burgers__right .about-burgers__text {
-                text-align: center;
-                font-size: 0.75rem;
-                margin-bottom: 0; } }
-          .burgers .burgers__list .burgers__item .about-burgers__right .about-burgers__pay {
+              padding-top: 10%; } }
+          @media screen and (max-width: 480px) {
+            .burgers .burgers__container .burgers__list .burgers__item .about-burgers {
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              height: auto; } }
+          .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
             display: -webkit-flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center; }
+            width: 50%;
+            position: relative;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between; }
             @media screen and (min-width: 481px) and (max-width: 768px) {
-              .burgers .burgers__list .burgers__item .about-burgers__right .about-burgers__pay {
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center; } }
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left {
+                width: 100%;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: flex-start; }
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left * {
+                  -webkit-box-flex: 1;
+                  -ms-flex: 1 1 auto;
+                  flex: 1 1 auto; } }
             @media screen and (max-width: 480px) {
-              .burgers .burgers__list .burgers__item .about-burgers__right .about-burgers__pay {
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center; } }
-            .burgers .burgers__list .burgers__item .about-burgers__right .about-burgers__pay .pay-price {
-              font-size: 4.5rem;
-              font-family: "Gagalin";
-              color: #e45028;
-              text-align: center;
-              text-transform: uppercase;
-              font-weight: 700;
-              margin-right: 1.25rem;
-              display: -webkit-inline-box;
-              display: -ms-inline-flexbox;
-              display: inline-flex;
-              display: -webkit-inline-flex; }
-            .burgers .burgers__list .burgers__item .about-burgers__right .about-burgers__pay .pay-btn {
-              padding-top: 0.9375rem;
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left {
+                width: 100%;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: flex-start; }
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left * {
+                  -webkit-box-flex: 1;
+                  -ms-flex: 1 1 auto;
+                  flex: 1 1 auto; } }
+            .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__link {
+              background-color: #f08c33;
+              width: 5.625rem;
+              height: 5.625rem;
+              border-radius: 0.3125rem;
               display: -webkit-box;
               display: -ms-flexbox;
               display: flex;
               display: -webkit-flex;
-              -webkit-box-pack: center;
-              -ms-flex-pack: center;
-              justify-content: center;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+              flex-direction: column;
               -webkit-box-align: center;
               -ms-flex-align: center;
               align-items: center;
-              display: -webkit-inline-box;
-              display: -ms-inline-flexbox;
-              display: inline-flex;
-              display: -webkit-inline-flex; }
-              .burgers .burgers__list .burgers__item .about-burgers__right .about-burgers__pay .pay-btn__link {
-                min-width: 6.25rem;
-                min-height: 2.5rem;
-                border-radius: 0.625rem;
-                font-size: 0.8125rem;
+              padding: 0.875rem 1.25rem;
+              -webkit-transition: 0.2s;
+              -o-transition: 0.2s;
+              transition: 0.2s; }
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__link:hover {
+                background-color: #e45028; }
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__link:hover + .composition__list {
+                left: 5.625rem;
+                top: 0px;
+                opacity: 1; }
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__link .link-text {
+                font-family: "Gagalin";
                 color: #fff;
-                line-height: 1.42;
-                text-decoration: none;
-                font-weight: 500;
                 text-transform: uppercase;
-                background-color: #e45028;
+                text-decoration: none; }
+            .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__list {
+              position: absolute;
+              left: -624.9375rem;
+              opacity: 0;
+              font-size: 0;
+              width: 17.5rem;
+              background-color: rgba(255, 255, 255, 0.5);
+              border-radius: 0.3125rem;
+              padding: 1.25rem;
+              -webkit-transition: opacity 1s;
+              -o-transition: opacity 1s;
+              transition: opacity 1s; }
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__list:hover {
+                left: 5.625rem;
+                top: 0rem;
+                opacity: 1; }
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item {
+                margin-bottom: 0.9375rem;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                display: -webkit-flex;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap; }
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item:last-child {
+                  margin-bottom: 0; }
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text_beef::before {
+                  content: '';
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  display: -webkit-flex;
+                  width: 2.8125rem;
+                  height: 2.8125rem;
+                  background: url("../img/icons/beef.svg") center center no-repeat;
+                  background-size: contain;
+                  vertical-align: middle;
+                  margin-right: 1.25rem; }
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text_buns::before {
+                  content: '';
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  display: -webkit-flex;
+                  width: 2.8125rem;
+                  height: 2.8125rem;
+                  background: url("../img/icons/buns.svg") center center no-repeat;
+                  background-size: contain;
+                  vertical-align: middle;
+                  margin-right: 1.25rem; }
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text_salad::before {
+                  content: '';
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  display: -webkit-flex;
+                  width: 2.8125rem;
+                  height: 2.8125rem;
+                  background: url("../img/icons/salad.svg") center center no-repeat;
+                  background-size: contain;
+                  vertical-align: middle;
+                  margin-right: 1.25rem; }
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text_sauce::before {
+                  content: '';
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  display: -webkit-flex;
+                  width: 2.8125rem;
+                  height: 2.8125rem;
+                  background: url("../img/icons/sauce.svg") center center no-repeat;
+                  background-size: contain;
+                  vertical-align: middle;
+                  margin-right: 1.25rem; }
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text_cucumber::before {
+                  content: '';
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  display: -webkit-flex;
+                  width: 2.8125rem;
+                  height: 2.8125rem;
+                  background: url("../img/icons/cucumber.svg") center center no-repeat;
+                  background-size: contain;
+                  vertical-align: middle;
+                  margin-right: 1.25rem; }
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text_cheese::before {
+                  content: '';
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  display: -webkit-flex;
+                  width: 2.8125rem;
+                  height: 2.8125rem;
+                  background: url("../img/icons/cheese.svg") center center no-repeat;
+                  background-size: contain;
+                  vertical-align: middle;
+                  margin-right: 1.25rem; }
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text {
+                  width: 70%;
+                  font-family: "Ubuntu";
+                  font-weight: 700;
+                  font-size: 0.875rem;
+                  margin: 0;
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  display: -webkit-flex;
+                  font-size: 0.875rem;
+                  margin: 0; }
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .composition__list .composition__item .item__text2 {
+                  width: 30%;
+                  text-align: right;
+                  font-size: 0.875rem;
+                  margin: 0;
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  display: -webkit-flex;
+                  font-size: 0.875rem;
+                  margin: 0; }
+            @media screen and (max-width: 480px) {
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .burgers__image {
+                width: 80%;
+                height: 100%;
+                padding-top: 28%;
+                margin-left: -15%;
+                margin-right: -15%; } }
+            .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .burgers__ccal {
+              font-family: "Gagalin";
+              color: rgba(255, 255, 255, 0.5); }
+              @media screen and (min-width: 481px) and (max-width: 768px) {
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .burgers__ccal {
+                  width: 100%;
+                  height: auto; } }
+              @media screen and (max-width: 480px) {
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .burgers__ccal {
+                  width: 100%;
+                  height: auto; } }
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .burgers__ccal .ccal-val {
+                background: url("../img/icons/kkal.svg") center center no-repeat;
+                background-size: contain;
+                width: 3.75rem;
+                height: 3.75rem;
+                color: #fff;
+                opacity: 0.5;
                 text-align: center;
-                padding-top: 0.75rem;
-                -webkit-transition: .5s;
-                -o-transition: .5s;
-                transition: .5s; }
-                .burgers .burgers__list .burgers__item .about-burgers__right .about-burgers__pay .pay-btn__link:hover {
-                  background-color: #ee7912; }
+                padding-top: 1.875rem;
+                margin: 0; }
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__left .burgers__ccal .ccal-text {
+                margin-top: 0.4375rem;
+                margin-bottom: 0;
+                text-align: center;
+                width: 3.75rem; }
+          .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            display: -webkit-flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            width: 50%;
+            padding-top: 4.375rem;
+            padding-left: 2.5rem; }
+            @media screen and (min-width: 993px) and (max-width: 1366px) {
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right {
+                padding-top: 5%; } }
+            @media screen and (min-width: 481px) and (max-width: 768px) {
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding-top: 5%;
+                padding-left: 0; } }
+            @media screen and (max-width: 480px) {
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+                text-align: center;
+                padding-top: 0;
+                padding-left: 10%; } }
+            .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right .burger-title {
+              font-size: 4.5rem;
+              font-family: "Gagalin";
+              color: #f9b43b;
+              text-transform: uppercase;
+              font-weight: 700;
+              font-size: 3rem;
+              line-height: 1.42;
+              color: #fff;
+              margin-bottom: 1.875rem; }
+              @media screen and (max-width: 480px) {
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right .burger-title {
+                  margin-bottom: 0;
+                  font-size: 1.5rem; } }
+            .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right .about-burgers__text {
+              font-family: 'Ubuntu';
+              font-size: 1.25rem;
+              font-weight: 500;
+              font-style: normal;
+              text-align: left;
+              line-height: 1.42;
+              color: rgba(0, 0, 0, 0.7);
+              margin-bottom: 3.125rem; }
+              @media screen and (min-width: 481px) and (max-width: 768px) {
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right .about-burgers__text {
+                  text-align: center; } }
+              @media screen and (max-width: 480px) {
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right .about-burgers__text {
+                  text-align: center;
+                  font-size: 0.75rem;
+                  margin-bottom: 0; } }
+            .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right .about-burgers__pay {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              display: -webkit-flex;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center; }
+              @media screen and (min-width: 481px) and (max-width: 768px) {
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right .about-burgers__pay {
+                  -webkit-box-pack: center;
+                  -ms-flex-pack: center;
+                  justify-content: center; } }
+              @media screen and (max-width: 480px) {
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right .about-burgers__pay {
+                  -webkit-box-pack: center;
+                  -ms-flex-pack: center;
+                  justify-content: center; } }
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right .about-burgers__pay .pay-price {
+                font-size: 4.5rem;
+                font-family: "Gagalin";
+                color: #e45028;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-right: 1.25rem;
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                display: -webkit-inline-flex; }
+              .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right .about-burgers__pay .pay-btn {
+                padding-top: 0.9375rem;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                display: -webkit-flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                display: -webkit-inline-flex; }
+                .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right .about-burgers__pay .pay-btn__link {
+                  min-width: 6.25rem;
+                  min-height: 2.5rem;
+                  border-radius: 0.625rem;
+                  font-size: 0.8125rem;
+                  color: #fff;
+                  line-height: 1.42;
+                  text-decoration: none;
+                  font-weight: 500;
+                  text-transform: uppercase;
+                  background-color: #e45028;
+                  text-align: center;
+                  padding-top: 0.75rem;
+                  -webkit-transition: .5s;
+                  -o-transition: .5s;
+                  transition: .5s; }
+                  .burgers .burgers__container .burgers__list .burgers__item .about-burgers__right .about-burgers__pay .pay-btn__link:hover {
+                    background-color: #ee7912; }
   .burgers .arrow-block-left {
     position: absolute;
     top: 50%;
@@ -1141,12 +1149,10 @@ a {
       .burgers .arrow-block-right {
         right: 8%; } }
   .burgers .arrow-scroll-next-image {
-    position: absolute;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg); }
   .burgers .arrow-scroll-prev-image {
-    position: absolute;
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg); }
@@ -1524,7 +1530,7 @@ a {
         @media screen and (max-width: 480px) {
           .reviews-general .reviews-list .reviews-item {
             width: 50%;
-            height: 23%;
+            height: 25%;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
@@ -2058,7 +2064,7 @@ a {
   .map .map-block {
     width: 100%;
     height: 93%; }
-    .map .map-block .map-image {
+    .map .map-block #ya-map {
       height: 100%;
       width: 100%; }
     .map .map-block .map__hint {

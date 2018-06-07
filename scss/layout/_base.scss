@@ -28,19 +28,26 @@ body {
   // min-width: rem(940px + 20px);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .maincontent {
   @include equal(100%);
-  overflow-x: hidden;
+  min-height: rem(650px);
+  // overflow-x: hidden;
+  transition: 1s;
+  will-change: transform;
 }
 
 .section {
-  height: 100vh;
-  width: 100vw;
+  // height: 100vh;
+  // width: 100vw;
+  height: 100%;
   min-height: rem(650px);
   // min-width: rem(940px);
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .container {
